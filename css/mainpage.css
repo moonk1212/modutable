@@ -1,0 +1,17 @@
+#head_menu{
+    height: 128px;
+    width: 100%;
+    background: #E0E0E0;
+}
+#main_sidebar{
+    position: absolute;
+    width: 379px;
+    height: 896px;
+    left: 0px;
+    top: 128px;
+
+    background: #333333;
+}
+#main_sidebar .item{
+    color: #BDBDBD;
+}
