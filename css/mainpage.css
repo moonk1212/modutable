@@ -4,7 +4,6 @@
 #head_menu{
     height: 128px;
     width: 100%;
-    background: #E0E0E0;
     display: flex;
     justify-content: space-between;
 }
@@ -26,27 +25,27 @@
 }
 .ui.open.button{
     margin-top: 79px;
+    background: white;
 }
 #mypage{
     position: absolute;
-    width: 95px;
+    width: 102px; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
     height: 22px;
     top: 82px;
     right: 34px;
 
     font-style: normal;
     font-weight: normal;
-    font-size: 22px; /* 24픽셀로 하면 line height랑 안 맞음*/
-    line-height: 22px;
+    font-size: 24px; 
+    line-height: 24px; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
     color: #000000;
 }
-#container1, #container2, #container3, #container4{
+#container1, #container2, #container3, #container4, #container1_background{
     width: 100%;
     height: 100vh;
 }
-#container1{
+#container1_background{
     position: fixed;
-    width: 100%;
     /* height: 896px; */
     top: 128px;
     background-image: url("../img/화양리1.png");
@@ -54,14 +53,16 @@
     background-size: 100vw 100vh;
     -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
     filter: grayscale(100%);
+    z-index: -1;
 }
 #center_box{
-    position: absolute;
+    position: relative;
+    margin: 0 auto;
     z-index: 1;
     width: 501px;
     height: 473px;
-    left: 470px;
-    top: 339px;
+    /* top: 339px; */
+    top: 30vh;
     background-color: rgba( 253, 191, 53, 0.7 ); /* #FDBF35색 투명도 0.7을 RGB값으로 표현한 것 */
     font-style: normal;
     text-align: center;
@@ -81,6 +82,7 @@
     flex-direction: column;
     position: relative;
     top: 67px; /* 104-37=67 */
+    height: 230px;
 }
 #cb3{
     width: 124px;
@@ -95,17 +97,43 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 37px;
-    position: absolute;
-    top: 394px;
+    position: relative;
+    top: 127px; /* 394-(37+230)=127 */
     width: 100%;
 }
 #container2{
     /* position: relative;
     top: 1024px;
     width: 100%; */
-   
+   background: white;
 }
 #top_cont{
     height: 379px;
-    background-color: white;
+    background: white;
+}
+#bottom_cont{
+    height: 648px;
+    padding: 73px 230px;
+    background: #C4C4C4;
+}
+.title{
+    font-style: normal;
+    font-weight: normal;
+}
+#bottom_cont .title{
+    text-align: center;
+    line-height: 1em;
+    padding-bottom: 143px;
+}
+.content{
+    font-size: 2em;
+    font-style: normal;
+    /* font-weight: 300; */
+    line-height: 56px;
+}
+#container3{
+    background: #FDBF35;
+}
+#container4{
+    background: #4F4F4F;
 }
