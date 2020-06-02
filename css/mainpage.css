@@ -1,43 +1,71 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+html{
+    font-size: 10px;
+}
 #head_menu{
-    height: 128px;
+    height: 12.8rem;
     width: 100%;
-    display: flex;
     justify-content: space-between;
+    position: absolute;
+    transition: 0.4s;
+}
+#menu_button{
+    background-image: url('../img/open-menu2.png');
+    background-size: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+
+}
+.pusher.dimmed{
+    overflow: hidden;
+    height: 100%;
 }
 #main_sidebar{
-    position: absolute;
-    width: 379px;
-    height: 896px;
+    width: 37.9rem;
+    height: 89.6rem;
     left: 0px;
-    top: 128px;
+    top: 12.8rem;
 
     background: #333333;
 }
 #main_sidebar .item{
+    width: fit-content;
     color: #BDBDBD;
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
-    line-height: 50px;
+    font-size: 2.4rem;
+    line-height: 5.0rem;
+    padding: 0;
+    margin: 5px 0 5px 56px;
+}
+#main_sidebar .item:hover{
+    background: #333333;
+}
+#main_sidebar .item:nth-child(1){
+    margin-top: 68px;
+    margin-bottom: 68px;
+}
+#main_sidebar .item:nth-child(3){
+    margin-bottom: 68px;
 }
 .ui.open.button{
-    margin-top: 79px;
+    margin-top: 7.9rem;
+    margin-left: 2rem;
     background: white;
 }
 #mypage{
     position: absolute;
-    width: 102px; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
-    height: 22px;
-    top: 82px;
-    right: 34px;
+    width: 10.2rem; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
+    height: 2.2rem;
+    top: 8.2rem;
+    right: 3.4rem;
 
     font-style: normal;
     font-weight: normal;
-    font-size: 24px; 
-    line-height: 24px; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
+    font-size: 2.4rem; 
+    line-height: 2.4rem; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
     color: #000000;
 }
 #container1, #container2, #container3, #container4, #container1_background{
@@ -47,7 +75,7 @@
 #container1_background{
     position: fixed;
     /* height: 896px; */
-    top: 128px;
+    top: 0;
     background-image: url("../img/화양리1.png");
     /* background-size: 1440px 896px; */
     background-size: 100vw 100vh;
@@ -59,8 +87,8 @@
     position: relative;
     margin: 0 auto;
     z-index: 1;
-    width: 501px;
-    height: 473px;
+    width: 50.1rem;
+    height: 47.3rem;
     /* top: 339px; */
     top: 30vh;
     background-color: rgba( 253, 191, 53, 0.7 ); /* #FDBF35색 투명도 0.7을 RGB값으로 표현한 것 */
@@ -69,15 +97,15 @@
     color: #333333;
 }
 #cb1{
-    font-size: 24px;
-    line-height: 37px;
+    font-size: 2.4rem;
+    line-height: 3.7rem;
     position: relative;
     top: 41px;
 }
 #cb2{
     font-weight: bold;
-    font-size: 96px;
-    line-height: 112px;
+    font-size: 9.6rem;
+    line-height: 11.2rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -85,20 +113,20 @@
     height: 230px;
 }
 #cb3{
-    width: 124px;
+    width: 12.4rem;
     height: 0px;
     border-top: 3px solid #333333;
     position: absolute;
-    left: 185px;
-    top: 360px;
+    left: 18.5rem;
+    top: 36.0rem;
 }
 #cb4{
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 37px;
+    font-size: 2.4rem;
+    line-height: 3.7rem;
     position: relative;
-    top: 127px; /* 394-(37+230)=127 */
+    top: 12.7rem; /* 394-(37+230)=127 */
     width: 100%;
 }
 #container2{
@@ -106,21 +134,22 @@
     top: 1024px;
     width: 100%; */
    background: white;
+   font-size: 2.4rem;
 }
-#top_cont{
+#cont2_top{
     height: 379px;
     background: white;
 }
-#bottom_cont{
+#cont2_bottom{
     height: 648px;
-    padding: 73px 230px;
+    padding: 7.3rem 23rem;
     background: #C4C4C4;
 }
 .title{
     font-style: normal;
     font-weight: normal;
 }
-#bottom_cont .title{
+#cont2_bottom .title{
     text-align: center;
     line-height: 1em;
     padding-bottom: 143px;
@@ -131,9 +160,62 @@
     /* font-weight: 300; */
     line-height: 56px;
 }
-#container3{
-    background: #FDBF35;
+#cont3_top{
+    background: white;
+    height: calc(100vh - 302px);
 }
-#container4{
+#cont3_bottom{
+    display: inline-flex;
+    justify-content: space-evenly;
+    background: #FDBF35;
+    height: 302px;
+    width: 100%;
+    /* padding: 80px 230px 44px 230px; */
+    padding: 50px 200px;
+}
+.ssnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 220px;
+    color: #333333;
+    text-align: center;
+}
+.ssnt_val{
+    font-size: 10.0rem;
+    line-height: 10.0rem;
+}
+.ssnt_label{
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+}
+#cont4_top{
+    height: 720px;
     background: #4F4F4F;
+}
+#cont4_top > div > p{
+    line-height: 3.8rem;
+}
+#cont4_bottom{
+    height: calc(100vh - 720px);
+    background: white;
+}
+#about_ngn{
+    position: absolute;
+    right: 10vw;
+}
+#about_ngn > a{
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    html{
+        font-size: 9px;
+    }
+    #cont2_bottom .title{
+        padding-bottom: 20px;
+    }
 }
