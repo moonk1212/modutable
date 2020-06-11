@@ -28,7 +28,7 @@ html{
     left: 0px;
     top: 12.8rem;
 
-    background: #333333;
+    background: #000000;
 }
 #main_sidebar .item{
     width: fit-content;
@@ -41,7 +41,7 @@ html{
     margin: 5px 0 5px 56px;
 }
 #main_sidebar .item:hover{
-    background: #333333;
+    background: #000000;
 }
 #main_sidebar .item:nth-child(1){
     margin-top: 68px;
@@ -58,7 +58,7 @@ html{
 #mypage{
     position: absolute;
     width: 10.2rem; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
-    height: 2.2rem;
+    height: 2.4rem;
     top: 8.2rem;
     right: 3.4rem;
 
@@ -68,17 +68,19 @@ html{
     line-height: 2.4rem; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
     color: #000000;
 }
-#container1, #container2, #container3, #container4, #container1_background{
+#container1, #container2, #container3, #container4{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
 }
 #container1_background{
+    width: 100%;
+    height: 100%;
     position: fixed;
     /* height: 896px; */
     top: 0;
     background-image: url("../img/화양리1.png");
-    /* background-size: 1440px 896px; */
-    background-size: 100vw 100vh;
+    /* background-size: 100vw 100vh; */
+    background-size: cover;
     -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
     filter: grayscale(100%);
     z-index: -1;
@@ -100,7 +102,7 @@ html{
     font-size: 2.4rem;
     line-height: 3.7rem;
     position: relative;
-    top: 41px;
+    top: 4.1rem;
 }
 #cb2{
     font-weight: bold;
@@ -109,8 +111,8 @@ html{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 67px; /* 104-37=67 */
-    height: 230px;
+    top: 6.7rem; /* 104-37=67 */
+    height: 23rem;
 }
 #cb3{
     width: 12.4rem;
@@ -137,22 +139,48 @@ html{
    font-size: 2.4rem;
 }
 #cont2_top{
-    height: 379px;
+    height: 37.9rem;
     background: white;
 }
+#cont2_top div{
+    height: 100%;
+    max-width: 1024px;
+    display: flex;
+    margin: 0 auto;
+}
+#cont2_top div div{
+    /* padding: 89px 0 0 185px;  */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    width: 45rem;
+}
 #cont2_bottom{
-    height: 648px;
-    padding: 7.3rem 23rem;
+    height: 64.8rem;
+    /* padding: 7.3rem 23rem; */
     background: #C4C4C4;
+}
+#cont2_bottom div{
+    max-width: 956px;
+    margin: 0 auto;
 }
 .title{
     font-style: normal;
     font-weight: normal;
 }
-#cont2_bottom .title{
+.heading{
+    font-size: 4.8rem; 
+    font-weight: bold;    
+    color: #333333; 
+    line-height: 4.8rem; 
+    border-bottom: 3px solid #333333;
+    padding: 4rem 0 2rem 0;
+}
+#cont2_bottom div .title{
     text-align: center;
     line-height: 1em;
-    padding-bottom: 143px;
+    padding-top: 7.3rem;
+    padding-bottom: 14.3rem;
 }
 .content{
     font-size: 2em;
@@ -164,21 +192,29 @@ html{
     background: white;
     height: calc(100vh - 302px);
 }
+#cont3_top .heading{
+    width: 95.6rem;
+    margin: 0 auto;
+    /* padding: 4rem 0 2rem 0; */
+}
 #cont3_bottom{
-    display: inline-flex;
-    justify-content: space-evenly;
     background: #FDBF35;
-    height: 302px;
-    width: 100%;
+    height: 30.2rem;
     /* padding: 80px 230px 44px 230px; */
-    padding: 50px 200px;
+    /* padding: 50px 200px; */
+}
+.ssnt_box{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 950px;
+    margin: 0 auto;
 }
 .ssnt{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 200px;
-    height: 220px;
+    width: 20rem;
+    height: 22rem;
     color: #333333;
     text-align: center;
 }
@@ -191,14 +227,31 @@ html{
     line-height: 2.4rem;
 }
 #cont4_top{
-    height: 720px;
-    background: #4F4F4F;
+    height: 72rem;
+    background: #828282;
+}
+#cont4_top div:nth-child(1){
+    line-height: 4.8rem; 
+    font-size: 4.8rem; 
+    font-weight: bold; 
+    color: #F2F2F2; 
+    border-bottom: 3px solid #F2F2F2; 
+    padding-top: 10rem;
+    padding-bottom: 3.5rem;
+    width: 956px;
+    margin: 0 auto;
+}
+#cont4_top div:nth-child(2){
+    font-size: 2.4rem; 
+    width: 956px;
+    margin: 0 auto;
+    padding: 5vh 1vw;
 }
 #cont4_top > div > p{
     line-height: 3.8rem;
 }
 #cont4_bottom{
-    height: calc(100vh - 720px);
+    height: 30.4rem;
     background: white;
 }
 #about_ngn{
@@ -211,11 +264,20 @@ html{
     line-height: 3rem;
 }
 
-@media all and (min-width: 768px) and (max-width: 1200px) {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px) */
+@media all and (min-width: 768px) and (max-width: 1023px) {
     html{
         font-size: 9px;
     }
-    #cont2_bottom .title{
-        padding-bottom: 20px;
+    .heading{
+        width: 85vw !important;
     }
+    #cont2_bottom div div:nth-child(3), #cont4_top div:nth-child(1), #cont4_top div:nth-child(2){
+        width: 85vw !important;
+    }
+}
+
+/* 모바일 가로, 세로 (해상도 480px ~ 767px) */
+@media all and (max-width:767px){
+    
 }
