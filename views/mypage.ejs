@@ -1,0 +1,69 @@
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheets/mypage.css">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="semantic-ui/dist/semantic.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" type='text/css'>
+    <title>
+        <%= title %>
+      </title>
+</head>
+<body>
+    <div id="top_div">
+        <div>
+            <h1 style="font-size: 2.4rem">
+                내 정보
+            </h1>
+        </div>
+        <div class="ui list info_list"style="font-size: 1.8rem">
+            <div class="item">이름: 홍길동</div>
+            <div class="item">핸드폰 번호: 010-0000-0000</div>
+            <div class="item">이메일 주소: abcd@efgh.com</div>
+            <div class="item">누구나 골목 이용 횟수: 2회</div>
+        </div>
+        <div class="ui list info_button">
+            <div class="item">
+                <a class="content" href="">
+                    내 정보 수정하기
+                    <i class="chevron right icon"></i>
+                </a>
+            </div>
+            <div class="item" style="color: #828282; font-size: 2.0rem">/</div>
+            <div class="item">
+                <a class="content" href="">
+                    로그아웃
+                    <i class="chevron right icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_div">
+        <div>
+            <h1 style="font-size: 2.4rem">
+                예약 내역
+            </h1>
+        </div>
+        <div class="ui centered grid" style="font-size: 1.8rem">
+            <div id="order_by">
+                최신순
+            </div>
+            <div class="ui grid" id="reservation_list">
+                <div class="res_time">7월 10일 16:59 예약</div>
+                <div class="res_content ui segment">
+                    <div class="res_cont">
+                        <div class="store_name">참새방앗간</div>
+                        <div class="use_time">7월 10일 금요일 17:00 ~ 19:00</div>
+                        <div class="seat_num">5번, 6번 자리 예약</div>
+                    </div>
+                    <div class="details_button"><a href="">가게 상세보기<i class="chevron right icon"></i></a>                         
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
