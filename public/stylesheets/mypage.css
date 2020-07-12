@@ -1,0 +1,79 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 10px !important;
+}
+#top_div{
+    background-color: #000000;
+    height: 38.5rem;
+    color: #f2f2f2;
+    text-align: center;
+}
+#top_div h1{
+    padding: 4.0rem 0;
+}
+.info_list{
+    padding: 0.8rem 0;
+}
+.info_list>.item{
+    line-height: 2.4rem !important;
+}
+.info_button{
+    display: inline-flex;
+    margin: 0;
+}
+.info_button>.item{
+    margin: 0 1.5rem;
+    padding: 0 !important;
+}
+.info_button>.item>.content{
+    color: #828282 !important;
+    font-size: 1.8rem !important;
+}
+.bottom_div>div>h1{
+    text-align: center;
+    padding: 4rem 0;
+}
+#order_by{
+    color: #828282;
+}
+#reservation_list{
+    margin: 0;
+}
+.res_time{
+    font-size: 1.8rem;
+    color: #333333;
+    margin-right: 1.5rem;
+}
+.res_content{
+    font-size: 1.8rem !important;
+    width: 73rem;
+    height: 16rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0 !important;
+    margin-left: 1.5rem !important;
+    padding: 1rem 3rem !important;
+
+    border: none !important;
+    border-radius: 3px !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.res_cont{
+    width: 40rem;
+    height: fit-content;
+    margin: auto 0;
+}
+.res_cont>div{
+    padding: 0.8rem 0;
+    text-align: start;
+}
+.details_button{
+    width: fit-content;
+    height: fit-content;
+    margin: auto 0;
+}
+.details_button>a{
+    color: #828282;
+}
