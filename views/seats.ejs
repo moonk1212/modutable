@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/seats.css">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="javascripts/seats.js"></script>
+    <script src="semantic-ui/dist/semantic.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" type='text/css'>
+    <title>
+        <%= title %>
+      </title>
+</head>
+<body>
+    <div style="display: flex;">
+        <div id="seat_box"></div>
+        <div>
+            <div class="ui selection dropdown">
+                <input id="selected_store" type="hidden" name="store">
+                <i class="dropdown icon"></i>
+                <div class="default text">가게를 선택해 주십시오</div>
+                <div class="menu">
+                  <div class="item" data-value="algo"">알고탭하우스</div>
+                  <div class="item" data-value="gongdae">공대오빠</div>
+                  <div class="item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
+                  <div class="item" data-value="jinmac">진맥</div>
+                </div>
+            </div>
+            <div><button class="ui button store_button">확인</button></div>
+        </div>
+        <div class="form_box">
+            <form class="ui form seat_form" action="/seat_post" method="POST">
+                좌석 선택
+                <div class="field">
+                    <% for(let i = 1; i < seatNum + 1 ; i++) { %>
+                        <div class="ui checkbox"><input type="checkbox" id="seat<%=i%>" name="seat<%=i%>"><label><%=i%></label></div>
+                    <% } %>
+                </div>
+            </form>
+            <button class="ui button ajaxsend">제출</button>
+        </div>
+    </div>
+</body>
