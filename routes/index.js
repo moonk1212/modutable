@@ -41,10 +41,10 @@ router.get('/mypage', (req, res, next) => {
   });
 });
 
-router.get('/seats', (req, res, next) => {
+router.get('/seats/:storename', (req, res, next) => {
 
-  let storeName = 'jinmac';
-  // let storeName = req.params.storename;
+  // let storeName = 'jinmac';
+  let storeName = req.params.storename;
   let storeData;
   let seatNum; // 가게별 좌석 갯수
   dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
@@ -68,8 +68,9 @@ router.get('/seats', (req, res, next) => {
   });
 });
 
-router.post('/seat_post', (req, res) => {
-  let storeName = 'jinmac';
+router.post('/seat_submit', (req, res) => {
+  let storeName = req.body.storename;
+  delete req.body.storename;
   let numOfSeats = Object.keys(req.body).length;
   let qKey = Object.keys(req.body);
   let qValue = "UPDATE `" + storeName + "_store_tbl` SET";
