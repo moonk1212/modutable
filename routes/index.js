@@ -41,7 +41,7 @@ router.get('/mypage', (req, res, next) => {
   });
 });
 
-router.get('/seats/:storename', (req, res, next) => {
+router.get('/admin/:storename', (req, res, next) => {
 
   // let storeName = 'jinmac';
   let storeName = req.params.storename;
@@ -58,7 +58,7 @@ router.get('/seats/:storename', (req, res, next) => {
     if(err) throw err;
     else{
       storeData = data[0];
-      res.render('seats', { 
+      res.render('admin', { 
         title: '누구나 골목',
         storeName : storeName,
         seatNum : seatNum,
@@ -96,6 +96,31 @@ router.post('/seat_submit', (req, res) => {
     }
   });
 
+});
+
+router.get('/seats/:storename', (req, res) => {
+  let storeName = req.params.storename;
+  let storeData;
+  let seatNum; // 가게별 좌석 갯수
+  dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
+    if(err) throw err;
+    else { 
+      seatNum = data[0];
+      seatNum = seatNum[Object.keys(seatNum)[0]] - 1;
+    }
+  });
+  dbInfo.query(`SELECT * FROM ${storeName}_store_tbl;`, (err, data) => {
+    if(err) throw err;
+    else{
+      storeData = data[0];
+      res.render('storeseats', { 
+        title: `누구나 골목 :: 이용 가능 좌석 - ${storeName}`,
+        storeName : storeName,
+        seatNum : seatNum,
+        storeData : storeData
+      });
+    }
+  });
 });
 // compression 이라는 미들웨어 쓰면 데이터 압축해서 전송할 수 있음
 // 사용자 많아지면 효율적

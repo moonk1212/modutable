@@ -1,13 +1,16 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/seats.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/storeseats.css">
     <link rel="stylesheet" type="text/css" href="../semantic-ui/dist/semantic.min.css">
+
+    <!-- 가게별 css 불러오기 -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/seats_gongdae.css">
 
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-    <script src="../javascripts/seats.js"></script>
+    <script src="../javascripts/storeseats.js"></script>
     <script src="../semantic-ui/dist/semantic.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" type='text/css'>
     
@@ -16,12 +19,20 @@
     </title>
 </head>
 <body>
-    <div style="display: flex;">
-        <div id="seat_box"><img src="/images/store_<%=storeName%>.png" alt="<%=storeName%>"></div>
-        <div>
+    <div class="cont">
+        <div><h1>이용 가능 좌석</h1></div>
+        <div class="ui segment">
+            <img class="seat_image" src="/images/store_<%=storeName%>.jpg" alt="진맥 가게 평면도" style="width: 100%">
+            <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
+            <div class="seats_box">
+                <% for(let i = 1; i < 95 ; i++) { %>
+                    <div id="seat<%=i%>" class="seats_class"><%=i%></div>
+                <% } %>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 4rem">
             <div class="ui selection dropdown">
                 <input type="hidden" name="store">
-                <i class="dropdown icon"></i>
                 <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
                 <div class="menu">
                     <div class="item" data-value="algo"">알고탭하우스</div>
@@ -30,21 +41,9 @@
                     <div class="item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
                     <div class="item" data-value="jinmac">진맥</div>
                 </div>
+                <i class="big sort down icon"></i>
             </div>
-            <div><button class="ui button store_button"><a>확인</a></button></div>
-        </div>
-        <div class="form_box">
-            <form class="ui form seat_form" method="post">
-                좌석 선택
-                <div class="field">
-                    <% for(let i = 1; i < seatNum + 1 ; i++) { %>
-                        <div class="ui checkbox"><input type="checkbox" id="seat<%=i%>" name="seat<%=i%>"><label><%=i%></label></div>
-                    <% } %>
-                </div>
-            </form>
-            <button class="ui button submit_seat_button">제출</button>
+            <div><button class="ui button store_button"><a style="color: black;">확인</a></button></div>
         </div>
     </div>
-    <script>
-    </script>
 </body>

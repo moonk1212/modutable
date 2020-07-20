@@ -1,12 +1,9 @@
 $(document).ready(() => {
 
-    let selectedStore = {};
-
     $('.ui.dropdown').dropdown({
         onChange: function(value) {
             // console.log(`value = ${value}`);
-            selectedStore['storename'] = value;
-            $('.store_button a').attr('href', `/seats/${value}`); 
+            $('.store_button a').attr('href', `/admin/${value}`); 
         }
     });
 

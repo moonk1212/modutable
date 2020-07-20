@@ -1,0 +1,392 @@
+/* 공대 2층 */
+.seats_class{
+    position: absolute;
+
+    background-color: #828282;
+    /* border:1px solid #828282; */
+    width: 30px; 
+    height: 30px;
+    border-radius:50px;
+    text-align: center;
+    margin: 0 auto;
+    /* font-size:12px; color:#fff; */
+    vertical-align: middle;
+    line-height: 30px;
+}
+#seat1{
+    top: 41px;
+    left: 111px;
+}
+#seat2{
+    top: 84px;
+    left: 70px;
+}
+#seat3{
+    top: 126px;
+    left: 112px
+}
+#seat4{
+    top: 84px;
+    left: 154px;
+}
+#seat5{
+    top: 48px;
+    left: 278px;
+}
+#seat6{
+    top: 91px;
+    left: 236px;
+}
+#seat7{
+    top: 133px;
+    left: 278px;
+}
+#seat8{
+    top: 91px;
+    left: 320px;
+}
+#seat9{
+    top: 49px;
+    left: 434px;
+}
+#seat10{
+    top: 91px;
+    left: 391px;
+}
+#seat11{
+    top: 133px;
+    left: 434px;
+}
+#seat12{
+    top: 91px;
+    left: 476px;
+}
+#seat13{
+    top: 155px;
+    left: 529px;
+}
+#seat14{
+    top: 197px;
+    left: 487px;
+}
+#seat15{
+    top: 240px;
+    left: 529px;
+}
+#seat16{
+    top: 197px;
+    left: 572px;
+}
+#seat17{
+    top: 268px;
+    left: 605px;
+}
+#seat18{
+    top: 310px;
+    left: 563px;
+}
+#seat19{
+    top: 353px;
+    left: 605px;
+}
+#seat20{
+    top: 310px;
+    left: 647px;
+}
+#seat21{
+    top: 403px;
+    left: 654px;
+}
+#seat22{
+    top: 445px;
+    left: 612px;
+}
+#seat23{
+    top: 487px;
+    left: 654px;
+}
+#seat24{
+    top: 445px;
+    left: 696px;
+}
+#seat25{
+    top: 224px;
+    left: 112px;
+}
+#seat26{
+    top: 266px;
+    left: 70px;
+}
+#seat27{
+    top: 308px;
+    left: 112px;
+}
+#seat28{
+    top: 266px;
+    left: 154px;
+}
+#seat29{
+    top: 223px;
+    left: 278px;
+}
+#seat30{
+    top: 266px;
+    left: 236px;
+}
+#seat31{
+    top: 308px;
+    left: 278px;
+}
+#seat32{
+    top: 266px;
+    left: 320px;
+}
+#seat33{
+    top: 357px;
+    left: 392px;
+}
+#seat34{
+    top: 399px;
+    left: 350px;
+}
+#seat35{
+    top: 441px;
+    left: 392px;
+}
+#seat36{
+    top: 399px;
+    left: 434px;
+}
+#seat37{
+    top: 525px;
+    left: 430px;
+}
+#seat38{
+    top: 567px;
+    left: 388px;
+}
+#seat39{
+    top: 609px;
+    left: 430px;
+}
+#seat40{
+    top: 567px;
+    left: 472px;
+}
+/* 공대오빠 3층 */
+#seat41{
+    top: 1078px;
+    left: 175px;
+}
+#seat42{
+    top: 1078px;
+    left: 273px;
+}
+#seat43{
+    top: 1120px;
+    left: 175px;
+}
+#seat44{
+    top: 1120px;
+    left: 273px;
+}
+#seat45{
+    top: 1161px; /*41*/
+    left: 175px;
+}
+#seat46{
+    top: 1161px;
+    left: 273px;
+}
+#seat47{
+    top: 1205.5px;
+    left: 175px;
+}
+#seat48{
+    top: 1205.5px;
+    left: 273px;
+}
+#seat49{
+    top: 1247px;
+    left: 175px;
+}
+#seat50{
+    top: 1247px;
+    left: 273px;
+}
+#seat51{
+    top: 1288px;
+    left: 175px;
+}
+#seat52{
+    top: 1288px;
+    left: 273px;
+}
+#seat53{
+    top: 1333.5px;
+    left: 175px;
+}
+#seat54{
+    top: 1333.5px;
+    left: 273px;
+}
+#seat55{
+    top: 1376px;
+    left: 175px;
+}
+#seat56{
+    top: 1376px;
+    left: 273px;
+}
+#seat57{
+    top: 1417px;
+    left: 175px;
+}
+#seat58{
+    top: 1417px;
+    left: 273px;
+}
+#seat59{
+    top: 1078px;
+    left: 355px;
+}
+#seat60{
+    top: 1078px;
+    left: 453px;
+}
+#seat61{
+    top: 1120px;
+    left: 355px;
+}
+#seat62{
+    top: 1120px;
+    left: 453px;
+}
+#seat63{
+    top: 1161px;
+    left: 355px;
+}
+#seat64{
+    top: 1161px;
+    left: 453px;
+}
+#seat65{
+    top: 1205.5px;
+    left: 355px;
+}
+#seat66{
+    top: 1205.5px;
+    left: 453px;
+}
+#seat67{
+    top: 1247px;
+    left: 355px;
+}
+#seat68{
+    top: 1247px;
+    left: 453px;
+}
+#seat69{
+    top: 1288px;
+    left: 355px;
+}
+#seat70{
+    top: 1288px;
+    left: 453px;
+}
+#seat71{
+    top: 1333.5px;
+    left: 355px;
+}
+#seat72{
+    top: 1333.5px;
+    left: 453px;
+}
+#seat73{
+    top: 1376px;
+    left: 355px;
+}
+#seat74{
+    top: 1376px;
+    left: 453px;
+}
+#seat75{
+    top: 1417px;
+    left: 355px;
+}
+#seat76{
+    top: 1417px;
+    left: 453px;
+}
+#seat77{
+    top: 1464px;
+    left: 355px;
+}
+#seat78{
+    top: 1464px;
+    left: 453px;
+}
+#seat79{
+    top: 1507px;
+    left: 355px;
+}
+#seat80{
+    top: 1507px;
+    left: 453px;
+}
+#seat81{
+    top: 1552px;
+    left: 404px;
+}
+#seat82{
+    top: 1332px;
+    left: 527px;
+}
+#seat83{
+    top: 1332px;
+    left: 625px;
+}
+#seat84{
+    top: 1378px;
+    left: 527px;
+}
+#seat85{
+    top: 1378px;
+    left: 625px;
+}
+#seat86{
+    top: 1420px;
+    left: 527px;
+}
+#seat87{
+    top: 1420px;
+    left: 625px;
+}
+#seat88{
+    top: 1461px;
+    left: 527px;
+}
+#seat89{
+    top: 1461px;
+    left: 625px;
+}
+#seat90{
+    top: 1509px;
+    left: 527px;
+}
+#seat91{
+    top: 1509px;
+    left: 625px;
+}
+#seat92{
+    top: 1550px;
+    left: 527px;
+}
+#seat93{
+    top: 1550px;
+    left: 625px;
+}
+#seat94{
+    top: 1596px;
+    left: 576px;
+}

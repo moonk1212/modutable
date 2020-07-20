@@ -1,0 +1,166 @@
+.seats_class{
+    position: absolute;
+
+    background-color: #828282;
+    /* border:1px solid #828282; */
+    width: 27px; 
+    height: 27px;
+    border-radius: 100%;
+    text-align: center;
+    margin: 0 auto;
+    /* font-size:12px; color:#fff; */
+    vertical-align: middle;
+    line-height: 27px;
+}
+#seat1{
+    top: 44px;
+    left: 298px;
+}
+#seat2{
+    top: 58px;
+    left: 354px;
+}
+#seat3{
+    top: 77px;
+    left: 408px;
+}
+#seat4{
+    top: 102px;
+    left: 460px;
+}
+#seat5{
+    top: 134px;
+    left: 509px;
+}
+#seat6{
+    top: 171px;
+    left: 554px;
+}
+#seat7{
+    top: 213px;
+    left: 594px;
+}
+#seat8{
+    top: 258px;
+    left: 629px;
+}
+#seat9{
+    top: 308px;
+    left: 659px;
+}
+#seat10{
+    top: 361px;
+    left: 683px;
+}
+#seat11{
+    top: 416px;
+    left: 701px;
+}
+#seat12{
+    top: 473px;
+    left: 712px;
+}
+#seat13{
+    top: 531px;
+    left: 717px;
+}
+#seat14{
+    top: 588px;
+    left: 714px;
+}
+#seat15{
+    top: 199px;
+    left: 289px;
+}
+#seat16{
+    top: 236px;
+    left: 252px;
+}
+#seat17{
+    top: 274px;
+    left: 289px;
+}
+#seat18{
+    top: 236px;
+    left: 327px;
+}
+#seat19{
+    top: 198px;
+    left: 437px;
+}
+#seat20{
+    top: 236px;
+    left: 400px;
+}
+#seat21{
+    top: 274px;
+    left: 437px; /* 438*/
+}
+#seat22{
+    top: 236px;
+    left: 475px;
+}
+#seat23{
+    top: 360px;
+    left: 366px;
+}
+#seat24{
+    top: 397px;
+    left: 329px;
+}
+#seat25{
+    top: 435px;
+    left: 366px;
+}
+#seat26{
+    top: 397px;
+    left: 404px;
+}
+#seat27{
+    top: 353px;
+    left: 538px;
+}
+#seat28{
+    top: 390px;
+    left: 500px;
+}
+#seat29{
+    top: 428px;
+    left: 538px;
+}
+#seat30{
+    top: 390px;
+    left: 575px;
+}
+#seat31{
+    top: 506px;
+    left: 580px;
+}
+#seat32{
+    top: 543px;
+    left: 543px;
+}
+#seat33{
+    top: 581px;
+    left: 579px;
+}
+#seat34{
+    top: 543px;
+    left: 618px;
+}
+#seat35{
+    top: 164px;
+    left: 165px;
+}
+#seat36{
+    top: 214px;
+    left: 165px;
+}
+#seat37{
+    top: 265px;
+    left: 165px;
+}
+#vSeat1{
+    top: 506px;
+    left: 432px;
+}
