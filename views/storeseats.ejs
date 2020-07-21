@@ -3,9 +3,6 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/storeseats.css">
     <link rel="stylesheet" type="text/css" href="../semantic-ui/dist/semantic.min.css">
 
-    <!-- 가게별 css 불러오기 -->
-    <link rel="stylesheet" type="text/css" href="../stylesheets/seats_gongdae.css">
-
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -23,27 +20,32 @@
         <div><h1>이용 가능 좌석</h1></div>
         <div class="ui segment">
             <img class="seat_image" src="/images/store_<%=storeName%>.jpg" alt="진맥 가게 평면도" style="width: 100%">
-            <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
+            <% if(storeName === 'gongdae2') { %>
+                <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
+            <% } %>
             <div class="seats_box">
-                <% for(let i = 1; i < 95 ; i++) { %>
-                    <div id="seat<%=i%>" class="seats_class"><%=i%></div>
+                <% for(let i = 1; i < seatNum + 1 ; i++) { %>
+                    <% if(storeData[i] === 1) { %>
+                        <div id="seat<%=i%>" class="seats_class" style="background-color: #828282;"><%=i%></div>
+                    <% } else { %>
+                        <div id="seat<%=i%>" class="seats_class"><%=i%></div>
+                    <% } %>
                 <% } %>
             </div>
         </div>
         <div style="display: flex; justify-content: center; margin: 4rem">
             <div class="ui selection dropdown">
                 <input type="hidden" name="store">
-                <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
+                <div id="selected_store" class="default text"><%=storeName%></div>
                 <div class="menu">
-                    <div class="item" data-value="algo"">알고탭하우스</div>
-                    <div class="item" data-value="gongdae2">공대오빠 2층</div>
-                    <div class="item" data-value="gongdae3">공대오빠 3층</div>
-                    <div class="item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
-                    <div class="item" data-value="jinmac">진맥</div>
+                    <div class="item dd_item" data-value="algo">알고탭하우스</div>
+                    <div class="item dd_item" data-value="gongdae">공대오빠</div>
+                    <div class="item dd_item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
+                    <div class="item dd_item" data-value="jinmac">진맥</div>
                 </div>
                 <i class="big sort down icon"></i>
             </div>
-            <div><button class="ui button store_button"><a style="color: black;">확인</a></button></div>
+            <div><button class="ui button store_button"><a href="/seats/<%=storeName%>" style="color: black;">확인</a></button></div>
         </div>
     </div>
 </body>

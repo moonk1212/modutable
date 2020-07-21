@@ -17,16 +17,20 @@
 </head>
 <body>
     <div style="display: flex;">
-        <div id="seat_box"><img src="/images/store_<%=storeName%>.png" alt="<%=storeName%>"></div>
+        <div id="seat_box">
+            <img src="/images/store_<%=storeName%>.png" alt="<%=storeName%>">
+            <% if(storeName === 'gongdae2') { %>
+                <img src="/images/store_gongdae3.png" alt="<%=storeName%>">
+            <% } %>
+        </div>
         <div>
             <div class="ui selection dropdown">
                 <input type="hidden" name="store">
                 <i class="dropdown icon"></i>
                 <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
                 <div class="menu">
-                    <div class="item" data-value="algo"">알고탭하우스</div>
-                    <div class="item" data-value="gongdae2">공대오빠 2층</div>
-                    <div class="item" data-value="gongdae3">공대오빠 3층</div>
+                    <div class="item" data-value="algo">알고탭하우스</div>
+                    <div class="item" data-value="gongdae">공대오빠</div>
                     <div class="item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
                     <div class="item" data-value="jinmac">진맥</div>
                 </div>

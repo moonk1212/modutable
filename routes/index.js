@@ -47,6 +47,9 @@ router.get('/admin/:storename', (req, res, next) => {
   let storeName = req.params.storename;
   let storeData;
   let seatNum; // 가게별 좌석 갯수
+
+  if(storeName === 'gongdae') storeName += '2';
+
   dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
     if(err) throw err;
     else { 
@@ -70,6 +73,7 @@ router.get('/admin/:storename', (req, res, next) => {
 
 router.post('/seat_submit', (req, res) => {
   let storeName = req.body.storename;
+  // if(storeName === 'gongdae') storeName += '2';
   delete req.body.storename;
   let numOfSeats = Object.keys(req.body).length;
   let qKey = Object.keys(req.body);
@@ -99,9 +103,18 @@ router.post('/seat_submit', (req, res) => {
 });
 
 router.get('/seats/:storename', (req, res) => {
+  /*
+  공대오빠 2,3층 = gongdae
+  진맥 = jinmac
+  치킨처럼 = likechicken
+  알고탭하우스 = algo
+  */
   let storeName = req.params.storename;
   let storeData;
   let seatNum; // 가게별 좌석 갯수
+
+  if(storeName === 'gongdae') storeName += '2';
+
   dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
     if(err) throw err;
     else { 
@@ -113,11 +126,13 @@ router.get('/seats/:storename', (req, res) => {
     if(err) throw err;
     else{
       storeData = data[0];
+      // console.log(storeData);
+      // console.log(Object.values(storeData));
       res.render('storeseats', { 
         title: `누구나 골목 :: 이용 가능 좌석 - ${storeName}`,
         storeName : storeName,
         seatNum : seatNum,
-        storeData : storeData
+        storeData : Object.values(storeData)
       });
     }
   });
