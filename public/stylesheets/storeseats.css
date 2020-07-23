@@ -1,0 +1,56 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 10px !important;
+}
+.cont{
+    width: 100vw;
+    height: 100vh;
+    background: #333333;
+}
+.cont h1 {
+    font-size: 24px; 
+    color: #ffffff; 
+    text-align: center; 
+    font-weight: normal;
+    padding: 50px 0 20px;
+}
+.ui.segment{
+    width: 796px;
+    height: 480px;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+    overflow: scroll;
+}
+.ui.dropdown{
+    width: 315px;
+    height: 60px;
+    padding: 10px 15px 10px 30px !important;
+    background: #FFFEFE !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: space-between;
+}
+.dd_item{
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 18px !important;
+    height: 50px !important;
+    padding-left: 30px !important;
+}
+.store_button{
+    width: 120px;
+    height: 60px;
+    background: #FDBF35 !important;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    margin-left: 24px !important;
+}
+#selected_store{
+    font-size: 18px;
+    line-height: 40px;
+    color: black;
+    /* color: #828282; */
+}
