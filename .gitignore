@@ -1,4 +1,3 @@
-node_modules
 *.code-workspace
 npm-debug.log
 package-lock.json
