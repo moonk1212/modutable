@@ -20,30 +20,18 @@ router.get('/about_ngn', (req, res, next) => {
   res.render('about_ngn', { title: '누구나 골목' });
 });
 
-router.get('/mypage', (req, res, next) => {
-  let userId='gaga';
-  dbInfo.query(`SELECT * FROM user WHERE user_id='${userId}';`, function(err, data){
-    if(err) throw err;
-    else {
-      let user_name = data[0].user_name;
-      let user_phone = data[0].user_phone;
-      let user_email = data[0].user_email;
-      let user_total = data[0].user_rs_total;
-
-      res.render('mypage', { 
-        title : '누구나 골목',
-        uName : user_name,
-        uPhone : user_phone,
-        uEmail : user_email,
-        uTotal : user_total
-      });
-    }
-  });
+router.get('/algo', (req, res, next) => {
+  res.render('store', { title: '누구나 골목: 알고탭하우스'});
+});
+router.get('/gongdae', (req, res, next) => {
+  res.render('store2', { title: '누구나 골목: 공대오빠'});
+});
+router.get('/likechicken', (req, res, next) => {
+  res.render('store3', { title: '누구나 골목: 치킨처럼'});
 });
 
 router.get('/admin/:storename', (req, res, next) => {
 
-  // let storeName = 'jinmac';
   let storeName = req.params.storename;
   let storeData;
   let seatNum; // 가게별 좌석 갯수

@@ -1,78 +1,63 @@
-*{
-    font-family: 'Roboto', sans-serif;
-}
-html{
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  html {
     font-size: 10px !important;
-}
-#head_menu{
+    width: 100%;
+  }
+  #head_menu {
     height: 12.8rem;
     width: 100%;
     justify-content: space-between;
     position: absolute;
     transition: 0.4s;
-}
-#menu_button{
-    background-image: url('../images/open-menu2.png');
+  }
+  
+  #menu_button {
+    background-image: url("../images/open-menu2.png");
     background-size: 3.5rem;
     width: 3.5rem;
     height: 3.5rem;
-
-}
-.pusher.dimmed{
+  }
+  .pusher.dimmed {
     overflow: hidden;
     height: 100%;
-}
-#main_sidebar{
+  }
+  #main_sidebar {
     width: 37.9rem;
     height: 89.6rem;
     left: 0px;
     top: 12.8rem;
-
+  
     background: #000000;
-}
-#main_sidebar .item{
-    width: fit-content;
-    color: #BDBDBD;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 2.4rem;
-    line-height: 5.0rem;
-    padding: 0;
-    margin: 5px 0 5px 56px;
-}
-#main_sidebar .item:hover{
-    background: #000000;
-}
-#main_sidebar .item:nth-child(1){
-    margin-top: 68px;
-    margin-bottom: 68px;
-}
-#main_sidebar .item:nth-child(3){
-    margin-bottom: 68px;
-}
-.ui.open.button{
+  }
+  .ui.open.button {
     margin-top: 7.9rem;
     margin-left: 2rem;
     background: white;
-}
-#mypage{
+  }
+  #mypage {
     position: absolute;
     width: 10.2rem; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
     height: 2.4rem;
     top: 8.2rem;
     right: 3.4rem;
-
+  
     font-style: normal;
     font-weight: normal;
-    font-size: 2.4rem; 
+    font-size: 2.4rem;
     line-height: 2.4rem; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
     color: #000000;
-}
-#container1, #container2, #container3, #container4{
+  }
+  #container1,
+  #container2,
+  #container3,
+  #container4,
+  #container5{
     width: 100%;
     height: fit-content;
-}
-#container1_background{
+  }
+  #container1_background {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -84,8 +69,8 @@ html{
     -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
     filter: grayscale(100%);
     z-index: -1;
-}
-#center_box{
+  }
+  #center_box {
     position: relative;
     margin: 0 auto;
     z-index: 1;
@@ -93,18 +78,23 @@ html{
     height: 47.3rem;
     /* top: 339px; */
     top: 30vh;
-    background-color: rgba( 253, 191, 53, 0.7 ); /* #FDBF35색 투명도 0.7을 RGB값으로 표현한 것 */
+    background-color: rgba(
+      253,
+      191,
+      53,
+      0.7
+    ); /* #FDBF35색 투명도 0.7을 RGB값으로 표현한 것 */
     font-style: normal;
     text-align: center;
     color: #333333;
-}
-#cb1{
+  }
+  #cb1 {
     font-size: 2.4rem;
     line-height: 3.7rem;
     position: relative;
     top: 4.1rem;
-}
-#cb2{
+  }
+  #cb2 {
     font-weight: bold;
     font-size: 9.6rem;
     line-height: 11.2rem;
@@ -113,16 +103,16 @@ html{
     position: relative;
     top: 6.7rem; /* 104-37=67 */
     height: 23rem;
-}
-#cb3{
+  }
+  #cb3 {
     width: 12.4rem;
     height: 0px;
     border-top: 3px solid #333333;
     position: absolute;
     left: 18.5rem;
-    top: 36.0rem;
-}
-#cb4{
+    top: 36rem;
+  }
+  #cb4 {
     font-style: normal;
     font-weight: normal;
     font-size: 2.4rem;
@@ -130,86 +120,126 @@ html{
     position: relative;
     top: 12.7rem; /* 394-(37+230)=127 */
     width: 100%;
-}
-#container2{
+  }
+  #container2 {
     /* position: relative;
-    top: 1024px;
-    width: 100%; */
-   background: white;
-   font-size: 2.4rem;
-}
-#cont2_top{
+      top: 1024px;
+      width: 100%; */
+    background: white;
+    font-size: 2.4rem;
+  }
+  #cont2_top {
     height: 37.9rem;
     background: white;
-}
-#cont2_top div{
+  }
+  #cont2_top div {
     height: 100%;
     max-width: 1024px;
     display: flex;
     margin: 0 auto;
-}
-#cont2_top div div{
+  }
+  #cont2_top div div {
     /* padding: 89px 0 0 185px;  */
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 45rem;
-}
-#cont2_bottom{
-    height: 64.8rem;
+  }
+  #cont2_bottom {
+    height: 70rem;
     /* padding: 7.3rem 23rem; */
-    background: #C4C4C4;
-}
-#cont2_bottom div{
+    background: #e0e0e0;
+  }
+  #cont2_bottom div {
     max-width: 956px;
     margin: 0 auto;
-}
-.title{
+  }
+  #cont6_bottom {
+    height: 70rem;
+    /* padding: 7.3rem 23rem; */
+    background: #333333;
+  }
+  #cont6_bottom div {
+    max-width: 956px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2.2rem;
     font-style: normal;
     font-weight: normal;
-}
-.heading{
-    font-size: 4.8rem; 
-    font-weight: bold;    
-    color: #333333; 
-    line-height: 4.8rem; 
+    text-align: center;
+    padding-top: 40px;
+  }
+  .explanation {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+  }
+  .heading {
+    font-size: 3.8rem;
+    font-weight: bold;
+    color: #333333;
+    line-height: 4.8rem;
     border-bottom: 3px solid #333333;
     padding: 4rem 0 2rem 0;
-}
-#cont2_bottom div .title{
+  }
+  
+  #select-store {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 45%;
+    left: 60%;
+  }
+  #store_map {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/store_map2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+  }
+  #cont2_bottom div .title {
     text-align: center;
     line-height: 1em;
     padding-top: 7.3rem;
     padding-bottom: 14.3rem;
-}
-.content{
+  }
+  #cont6_bottom div .title {
+    text-align: center;
+    line-height: 1em;
+    padding-top: 7.3rem;
+    padding-bottom: 14.3rem;
+  }
+  .content {
     font-size: 2em;
     font-style: normal;
     /* font-weight: 300; */
     line-height: 56px;
-}
-#cont3_top{
+  }
+  #cont3_top {
     background: white;
     height: calc(100vh - 302px);
-}
-#cont3_top .heading{
+  }
+  #cont3_top .heading {
     width: 95.6rem;
     margin: 0 auto;
     /* padding: 4rem 0 2rem 0; */
-}
-#cont3_bottom{
-    background: #FDBF35;
+  }
+  #cont3_bottom {
+    background: #fdbf35;
     height: 30.2rem;
     /* padding: 80px 230px 44px 230px; */
     /* padding: 50px 200px; */
-}
-.ssnt_box{
+  }
+  .ssnt_box {
     display: flex;
     justify-content: space-evenly;
     max-width: 950px;
     margin: 0 auto;
-}
-.ssnt{
+  }
+  .ssnt {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -217,67 +247,110 @@ html{
     height: 22rem;
     color: #333333;
     text-align: center;
-}
-.ssnt_val{
-    font-size: 10.0rem;
-    line-height: 10.0rem;
-}
-.ssnt_label{
+  }
+  .ssnt_val {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+  .ssnt_label {
     font-size: 2.4rem;
     line-height: 2.4rem;
-}
-#cont4_top{
+  }
+  #cont4_top {
     height: 72rem;
-    background: #828282;
-}
-#cont4_top div:nth-child(1){
-    line-height: 4.8rem; 
-    font-size: 4.8rem; 
-    font-weight: bold; 
-    color: #F2F2F2; 
-    border-bottom: 3px solid #F2F2F2; 
+    background: #333333;
+  }
+  #cont4_top div:nth-child(1) {
+    line-height: 4.8rem;
+    font-size: 4.8rem;
+    font-weight: bold;
+    color: #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
     padding-top: 10rem;
     padding-bottom: 3.5rem;
     width: 956px;
     margin: 0 auto;
-}
-#cont4_top div:nth-child(2){
-    font-size: 2.4rem; 
+  }
+  #cont4_top div:nth-child(2) {
+    font-size: 2.4rem;
     width: 956px;
     margin: 0 auto;
     padding: 5vh 1vw;
-}
-#cont4_top > div > p{
+  }
+  #cont4_top > div > p {
     line-height: 3.8rem;
-}
-#cont4_bottom{
+  }
+  #cont4_bottom {
     height: 30.4rem;
     background: white;
-}
-#about_ngn{
+  }
+  #cont5_top {
+    height: 72rem;
+    background-color: rgba(0,0,0, 0.7); 
+  }
+  #cont5_top div:nth-child(1) {
+    line-height: 4.8rem;
+    font-size: 4.8rem;
+    font-weight: bold;
+    color: #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
+    padding-top: 10rem;
+    padding-bottom: 3.5rem;
+    width: 956px;
+    margin: 0 auto;
+  }
+  #cont5_top div:nth-child(2) {
+    font-size: 2.4rem;
+    width: 956px;
+    margin: 0 auto;
+    padding: 5vh 1vw;
+  }
+  #cont5_top > div > p {
+    line-height: 3.8rem;
+  }
+  #about_ngn {
     position: absolute;
     right: 10vw;
-}
-#about_ngn > a{
+  }
+  #about_ngn > a {
     font-size: 2.4rem;
     font-weight: normal;
     line-height: 3rem;
-}
-
-/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px) */
-@media all and (min-width: 768px) and (max-width: 1023px) {
-    html{
-        font-size: 9px !important;
+  }
+  .nuguna_golmok {
+    background-image: url("../images/mainpage_nuguna.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+  
+  /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px) */
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    html {
+      font-size: 9px !important;
     }
-    .heading{
-        width: 85vw !important;
+    .heading {
+      width: 85vw !important;
     }
-    #cont2_bottom div div:nth-child(3), #cont4_top div:nth-child(1), #cont4_top div:nth-child(2){
-        width: 85vw !important;
+    #cont6_bottom div div:nth-child(4),
+    #cont2_bottom div div:nth-child(3),
+    #cont4_top div:nth-child(1),
+    #cont4_top div:nth-child(2) {
+      width: 85vw !important;
     }
-}
-
-/* 모바일 가로, 세로 (해상도 480px ~ 767px) */
-@media all and (max-width:767px){
-    
-}
+    #select-store {
+      width: 85vw !important;
+    }
+    #cont5_top div:nth-child(1),
+    #cont5_top div:nth-child(2) {
+      width: 85vw !important;
+    }
+  }
+  
+  /* 모바일 가로, 세로 (해상도 480px ~ 767px) */
+  @media all and (max-width: 767px) {
+    #select-store {
+      width: 85vw !important;
+    }
+  }
+  

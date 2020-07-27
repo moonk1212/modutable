@@ -16,36 +16,46 @@
     </title>
 </head>
 <body>
+    <div class="head_cont" style="height: 12.8rem; width: 100%">
+        <div id="head_menu" class="ui fixed menu">
+            <a href="/" style="display: block; margin: 0px auto; align-content: center; align-self: center;">
+                <img id="nute_logo" src="../images/nuguna_logo.png" alt="Nuguna Table logo">
+            </a>
+        </div>
+    </div>
     <div class="cont">
-        <div><h1>이용 가능 좌석</h1></div>
-        <div class="ui segment">
-            <img class="seat_image" src="/images/store_<%=storeName%>.jpg" alt="진맥 가게 평면도" style="width: 100%">
-            <% if(storeName === 'gongdae2') { %>
-                <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
-            <% } %>
-            <div class="seats_box">
-                <% for(let i = 1; i < seatNum + 1 ; i++) { %>
-                    <% if(storeData[i] === 1) { %>
-                        <div id="seat<%=i%>" class="seats_class" style="background-color: #828282;"><%=i%></div>
-                    <% } else { %>
-                        <div id="seat<%=i%>" class="seats_class"><%=i%></div>
-                    <% } %>
+        <div style="display: flex; flex-direction: column;">
+            <div><h1>이용 가능 좌석</h1></div>
+            <div class="ui segment">
+                <img class="seat_image" src="/images/store_<%=storeName%>.jpg" alt="진맥 가게 평면도" style="width: 100%">
+                <% if(storeName === 'gongdae2') { %>
+                    <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
                 <% } %>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: center; margin: 4rem">
-            <div class="ui selection dropdown">
-                <input type="hidden" name="store">
-                <div id="selected_store" class="default text"><%=storeName%></div>
-                <div class="menu">
-                    <div class="item dd_item" data-value="algo">알고탭하우스</div>
-                    <div class="item dd_item" data-value="gongdae">공대오빠</div>
-                    <div class="item dd_item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
-                    <div class="item dd_item" data-value="jinmac">진맥</div>
+                <div class="seats_box">
+                    <% for(let i = 1; i < seatNum + 1 ; i++) { %>
+                        <% if(storeData[i] === 1) { %>
+                            <div id="seat<%=i%>" class="seats_class" style="background-color: #828282;"><%=i%></div>
+                        <% } else { %>
+                            <div id="seat<%=i%>" class="seats_class"><%=i%></div>
+                        <% } %>
+                    <% } %>
                 </div>
-                <i class="big sort down icon"></i>
             </div>
-            <div><button class="ui button store_button"><a href="/seats/<%=storeName%>" style="color: black;">확인</a></button></div>
+            <div style="display: flex; justify-content: center; margin: 4rem">
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="store">
+                    <div id="selected_store" class="default text"><%=storeName%></div>
+                    <div class="menu">
+                        <div class="item dd_item" data-value="algo">알고탭하우스</div>
+                        <div class="item dd_item" data-value="gongdae">공대오빠</div>
+                        <div class="item dd_item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
+                        <div class="item dd_item" data-value="jinmac">진맥</div>
+                    </div>
+                    <i class="big sort down icon"></i>
+                </div>
+                <div><button class="ui button store_button"><a href="/seats/<%=storeName%>" style="color: black;">확인</a></button></div>
+            </div>
         </div>
+ 
     </div>
 </body>

@@ -14,7 +14,7 @@ $(document).ready(() => {
 
     document.querySelector('.submit_seat_button').addEventListener('click', () => {
         let seatData = {};
-        let seatNum = document.forms[0].length - 1;
+        let seatNum = document.forms[0].length;
         // let inputdata = document.forms[0].elements[0];
         // let inputdata2 = document.forms[0].elements[1];
         
@@ -26,6 +26,7 @@ $(document).ready(() => {
             }
         }
         seatData['storename'] = $('#seat_box img').attr('alt');
+        console.log(seatData);
         sendAjax('/seat_submit', seatData);
     });
 

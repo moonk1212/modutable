@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/mainpage.css' />
+    <link rel='stylesheet' href='/stylesheets/store.css' />
+    <link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="javascripts/mainpage.js"></script>
+    <script src="javascripts/store.js"></script>
+    <script src="semantic-ui/dist/semantic.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" type='text/css'>      
+  </head>
+
+  <body>
+    <div id="head_menu" class="ui fixed menu">
+        <a href="/" style="display: block; margin: 0px auto; align-content: center; align-self: center;">
+            <img id="nute_logo" src="../images/nuguna_logo.png" alt="Nuguna Table logo">
+        </a>
+    </div>
+
+    <div id="pusher">
+        <div id="container" class="ui equal width grid stackable">
+            <div id="container2" class="five wide column">
+<!--                슬라이더-->
+                <div class="slidershow-container">
+                    <div class="mySlides fade">
+                        <div id="container_img5"></div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div id="container_img6"></div>
+                    </div>
+<!--                     Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div id="container_content" class="eleven wide column">
+              <div id="content">
+                <div class="ui grid">
+                <span id="title">치킨처럼</span>
+                <div class="row">
+                    <span id="content_title">가게 상세 정보</span>
+                    <span id="content_text" style="text-align:left;">치킨처럼은 1층에 있어 접근성이 좋습니다. 넓은 공간으로 이야기를 하면서 공부를 하거나, 단체로 모임을 진행하기 좋은 장소입니다. 빔 프로젝터와 TV를 이용하여 스포츠, 프레젠테이션, 영화감상 등 색다른 활동을 할 수도 있습니다. 가게 내의 술이나 음료(별도 지불)를 이용 할 수도 있습니다. 치킨처럼에서 맥주를 마시며 회의를 해보는 것은 어떠세요?</span>
+                </div>
+                <div class="row">
+                    <span id="content_title">주소</span>
+                    <span id="content_text" style="text-align:left;">서울 광진구 광나루로 364</span>
+                </div>
+                <div class="row">
+                    <span id="content_title">영업 시간</span>
+                    <span id="content_text" style="text-align:left;">16:00 ~ 00:00</span>
+                </div>
+                <div class="row">
+                    <span id="content_title">공간 대여 가능 시간</span>
+                    <span id="content_text" style="text-align:left;">12:00 ~ 16:00</span>
+                </div>
+                </div>
+                <div id="icon">
+                    <div class="ui four column centered grid">
+                        <div id="img1" class="column">
+                            <p id="icon_text">와이파이 있음</p>
+                        </div>
+                        <div id="img2" class="column">
+                            <p id="icon_text">음식물 반입 금지</p>
+                        </div>
+                        <div id="img3" class="column">
+                            <p id="icon_text">음료 반입 가능</p>
+                        </div>
+                        <div id="img5" class="column">
+                            <p id="icon_text">남녀구분 화장실</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="btn" class="ui button">여석 확인하기</div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascripts/store.js"></script>
+  </body>
+</html>
