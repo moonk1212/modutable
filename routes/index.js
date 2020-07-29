@@ -36,27 +36,30 @@ router.get('/admin/:storename', (req, res, next) => {
   let storeData;
   let seatNum; // 가게별 좌석 갯수
 
-  if(storeName === 'gongdae') storeName += '2';
+  if (storeName !== 'gongdae' && storeName !== 'algo' && storeName !== 'likechicken') throw err; 
+  else {
+    if(storeName === 'gongdae') storeName += '2';
 
-  dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
-    if(err) throw err;
-    else { 
-      seatNum = data[0];
-      seatNum = seatNum[Object.keys(seatNum)[0]] - 1;
-    }
-  });
-  dbInfo.query(`SELECT * FROM ${storeName}_store_tbl;`, (err, data) => {
-    if(err) throw err;
-    else{
-      storeData = data[0];
-      res.render('admin', { 
-        title: '누구나 골목',
-        storeName : storeName,
-        seatNum : seatNum,
-        storeData : storeData
-      });
-    }
-  });
+    dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
+      if(err) throw err;
+      else { 
+        seatNum = data[0];
+        seatNum = seatNum[Object.keys(seatNum)[0]] - 1;
+      }
+    });
+    dbInfo.query(`SELECT * FROM ${storeName}_store_tbl;`, (err, data) => {
+      if(err) throw err;
+      else{
+        storeData = data[0];
+        res.render('admin', { 
+          title: '누구나 골목 :: 관리자 페이지',
+          storeName : storeName,
+          seatNum : seatNum,
+          storeData : storeData
+        });
+      }
+    });
+  }
 });
 
 router.post('/seat_submit', (req, res) => {
@@ -101,29 +104,32 @@ router.get('/seats/:storename', (req, res) => {
   let storeData;
   let seatNum; // 가게별 좌석 갯수
 
-  if(storeName === 'gongdae') storeName += '2';
+  if (storeName !== 'gongdae' && storeName !== 'algo' && storeName !== 'likechicken') throw err; 
+  else {
+    if(storeName === 'gongdae') storeName += '2';
 
-  dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
-    if(err) throw err;
-    else { 
-      seatNum = data[0];
-      seatNum = seatNum[Object.keys(seatNum)[0]] - 1;
-    }
-  });
-  dbInfo.query(`SELECT * FROM ${storeName}_store_tbl;`, (err, data) => {
-    if(err) throw err;
-    else{
-      storeData = data[0];
-      // console.log(storeData);
-      // console.log(Object.values(storeData));
-      res.render('storeseats', { 
-        title: `누구나 골목 :: 이용 가능 좌석 - ${storeName}`,
-        storeName : storeName,
-        seatNum : seatNum,
-        storeData : Object.values(storeData)
-      });
-    }
-  });
+    dbInfo.query(`SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '${storeName}_store_tbl';`, (err, data) => {
+      if(err) throw err;
+      else { 
+        seatNum = data[0];
+        seatNum = seatNum[Object.keys(seatNum)[0]] - 1;
+      }
+    });
+    dbInfo.query(`SELECT * FROM ${storeName}_store_tbl;`, (err, data) => {
+      if(err) throw err;
+      else{
+        storeData = data[0];
+        // console.log(storeData);
+        // console.log(Object.values(storeData));
+        res.render('storeseats', { 
+          title: `누구나 골목 :: 이용 가능 좌석 - ${storeName}`,
+          storeName : storeName,
+          seatNum : seatNum,
+          storeData : Object.values(storeData)
+        });
+      }
+    });
+  }
 });
 // compression 이라는 미들웨어 쓰면 데이터 압축해서 전송할 수 있음
 // 사용자 많아지면 효율적

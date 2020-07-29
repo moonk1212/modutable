@@ -16,27 +16,28 @@
     </title>
 </head>
 <body>
-    <div style="display: flex;">
-        <div id="seat_box">
-            <img src="/images/store_<%=storeName%>.png" alt="<%=storeName%>">
-            <% if(storeName === 'gongdae2') { %>
-                <img src="/images/store_gongdae3.png" alt="<%=storeName%>">
-            <% } %>
-        </div>
-        <div>
-            <div class="ui selection dropdown">
-                <input type="hidden" name="store">
-                <i class="dropdown icon"></i>
-                <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
-                <div class="menu">
-                    <div class="item" data-value="algo">알고탭하우스</div>
-                    <div class="item" data-value="gongdae">공대오빠</div>
-                    <div class="item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
-                    <div class="item" data-value="jinmac">진맥</div>
-                </div>
+    <div class="container">
+        <div style="display: flex;">
+            <div id="seat_box">
+                <img src="/images/mng_<%=storeName%>.jpg" alt="<%=storeName%>" style="max-width: inherit">
+                <% if(storeName === 'gongdae2') { %>
+                    <img src="/images/mng_gongdae3.jpg" alt="<%=storeName%>" style="max-width: inherit">
+                <% } %>
             </div>
-            <div><button class="ui button store_button"><a>확인</a></button></div>
-        </div>
+            <div>
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="store">
+                    <i class="dropdown icon"></i>
+                    <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
+                    <div class="menu">
+                        <div class="item" data-value="algo">알고탭하우스</div>
+                        <div class="item" data-value="gongdae">공대오빠</div>
+                        <div class="item" data-value="likechicken">치킨처럼</div>
+                    </div>
+                </div>
+                <div><button class="ui button store_button"><a>확인</a></button></div>
+            </div>
+        </div>    
         <div class="form_box">
             <form class="ui form seat_form" method="post">
                 좌석 선택
@@ -51,6 +52,4 @@
             <button class="ui button submit_seat_button">제출</button>
         </div>
     </div>
-    <script>
-    </script>
 </body>

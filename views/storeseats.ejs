@@ -27,9 +27,9 @@
         <div style="display: flex; flex-direction: column;">
             <div><h1>이용 가능 좌석</h1></div>
             <div class="ui segment">
-                <img class="seat_image" src="/images/store_<%=storeName%>.jpg" alt="진맥 가게 평면도" style="width: 100%">
+                <img class="seat_image" src="/images/store_<%=storeName%>_.jpg" alt="가게 평면도" style="width: 100%">
                 <% if(storeName === 'gongdae2') { %>
-                    <img class="seat_image" src="/images/store_gongdae3.jpg" alt="진맥 가게 평면도" style="width: 100%">
+                    <img class="seat_image" src="/images/store_gongdae3_.jpg" alt="가게 평면도" style="width: 100%">
                 <% } %>
                 <div class="seats_box">
                     <% for(let i = 1; i < seatNum + 1 ; i++) { %>
@@ -48,8 +48,7 @@
                     <div class="menu">
                         <div class="item dd_item" data-value="algo">알고탭하우스</div>
                         <div class="item dd_item" data-value="gongdae">공대오빠</div>
-                        <div class="item dd_item" data-value="likechicken">치킨처럼 + 끼리끼리</div>
-                        <div class="item dd_item" data-value="jinmac">진맥</div>
+                        <div class="item dd_item" data-value="likechicken">치킨처럼</div>
                     </div>
                     <i class="big sort down icon"></i>
                 </div>

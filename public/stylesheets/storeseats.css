@@ -5,6 +5,9 @@ html{
     font-size: 10px !important;
     width: 100%;
 }
+body {
+    overflow-x: hidden;
+}
 #head_menu {
     height: 12.8rem;
     width: 100%;

@@ -1,6 +1,9 @@
 html{
     width: 100%;
 }
+body {
+    overflow-x: hidden;
+}
 #container {
     margin: 0;
     height: 100vh;

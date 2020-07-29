@@ -1,13 +1,13 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+body {
+    overflow-x: hidden;
+}
 html{
     font-size: 10px !important;
     width: 100%;
 }
 #seat_box{
-    background-size: 43.8rem 85.8rem;
-    width: 43.8rem;
-    height: 85.8rem;
-    margin-right: 100px;
+    max-width: 80rem;
 }

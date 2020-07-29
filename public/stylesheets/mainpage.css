@@ -1,6 +1,9 @@
 * {
     font-family: "Roboto", sans-serif;
   }
+  body {
+    overflow-x: hidden;
+}
   html {
     font-size: 10px !important;
     width: 100%;
@@ -211,6 +214,8 @@
     line-height: 1em;
     padding-top: 7.3rem;
     padding-bottom: 14.3rem;
+    position: relative;
+    z-index: 1;
   }
   .content {
     font-size: 2em;
@@ -220,7 +225,7 @@
   }
   #cont3_top {
     background: white;
-    height: calc(100vh - 302px);
+    height: calc(100vh - 282px);
   }
   #cont3_top .heading {
     width: 95.6rem;
@@ -229,22 +234,38 @@
   }
   #cont3_bottom {
     background: #fdbf35;
-    height: 30.2rem;
+    height: 28.2rem;
     /* padding: 80px 230px 44px 230px; */
     /* padding: 50px 200px; */
   }
   .ssnt_box {
     display: flex;
     justify-content: space-evenly;
-    max-width: 950px;
+    max-width: 980px;
+    height: 100%;
     margin: 0 auto;
+  }
+  #cont3_bottom2, .bottom2 {
+    background: #000000;
+    height: 28.2rem;
+    position: relative;
+  }
+  .store_box{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 980px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  #cont3_bottom2 .store_box .ssnt, .bottom2 .ssnt{
+    color: #f2f2f2;
   }
   .ssnt {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 20rem;
-    height: 22rem;
+    height: 100%;
     color: #333333;
     text-align: center;
   }
@@ -308,6 +329,10 @@
   #cont5_top > div > p {
     line-height: 3.8rem;
   }
+  #cont6_bottom {
+    position: relative;
+    z-index: 1;
+  }
   #about_ngn {
     position: absolute;
     right: 10vw;
@@ -327,7 +352,7 @@
   /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px) */
   @media all and (min-width: 768px) and (max-width: 1023px) {
     html {
-      font-size: 9px !important;
+      /* font-size: 9px !important; */
     }
     .heading {
       width: 85vw !important;
