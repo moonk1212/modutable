@@ -12,7 +12,7 @@ $(document).ready(() => {
             alert('가게를 선택하세요');
     });
 
-    document.querySelector('.submit_seat_button').addEventListener('click', () => {
+    document.querySelector('#submit_seat_button').addEventListener('click', () => {
         let seatData = {};
         let seatNum = document.forms[0].length;
         // let inputdata = document.forms[0].elements[0];

@@ -14,42 +14,45 @@
     <title>
         <%= title %>
     </title>
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 </head>
 <body>
-    <div class="container">
-        <div style="display: flex;">
-            <div id="seat_box">
-                <img src="/images/mng_<%=storeName%>.jpg" alt="<%=storeName%>" style="max-width: inherit">
-                <% if(storeName === 'gongdae2') { %>
-                    <img src="/images/mng_gongdae3.jpg" alt="<%=storeName%>" style="max-width: inherit">
-                <% } %>
-            </div>
-            <div>
-                <div class="ui selection dropdown">
-                    <input type="hidden" name="store">
-                    <i class="dropdown icon"></i>
-                    <div id="selected_store" class="default text">가게를 선택해 주십시오</div>
-                    <div class="menu">
-                        <div class="item" data-value="algo">알고탭하우스</div>
-                        <div class="item" data-value="gongdae">공대오빠</div>
-                        <div class="item" data-value="likechicken">치킨처럼</div>
-                    </div>
+    <div class="cont">
+        <div><h1 style="font-family: 'Roboto', sans-serif;">가게 평면도</h1></div>
+        <div id="seat_box" class="ui segment">
+            <img class="seat_image" src="/images/mng_<%=storeName%>.jpg" alt="<%=storeName%>" style="width: 764px">
+            <% if(storeName === 'gongdae2') { %>
+                <img class="seat_image" src="/images/mng_gongdae3.jpg" alt="<%=storeName%>" style="width: 764px">
+            <% } %>
+        </div>
+        <div style="display: flex; justify-content: center; margin: 4rem">
+            <div class="ui selection dropdown">
+                <input type="hidden" name="store">
+                <div id="selected_store" class="default text"><%=storeName%></div>
+                <div class="menu">
+                    <div class="item dd_item" data-value="algo">알고탭하우스</div>
+                    <div class="item dd_item" data-value="gongdae">공대오빠</div>
+                    <div class="item dd_item" data-value="likechicken">치킨처럼</div>
                 </div>
-                <div><button class="ui button store_button"><a>확인</a></button></div>
+                <i class="big sort down icon"></i>
             </div>
-        </div>    
-        <div class="form_box">
-            <form class="ui form seat_form" method="post">
-                좌석 선택
+            <div><button class="ui button store_button"><a href="/admin/<%=storeName%>" style="color: white;">확인</a></button></div>
+        </div>
+        <div id="form_box">
+            <form class="ui form" id="seat_form" method="post">
+                <h2 style="font-family: 'Roboto', sans-serif;">좌석 선택</h2>
                 <div>
                     <div class="field">
                     <% for(let i = 1; i < seatNum + 1 ; i++) { %>
-                            <div class="ui checkbox"><input type="checkbox" id="seat<%=i%>" name="seat<%=i%>"><label><%=i%></label></div>
+                            <div class="ui checkbox seat_checkbox"><input type="checkbox" id="seat<%=i%>" name="seat<%=i%>"><label><%=i%></label></div>
                     <% } %>
                     </div>
                 </div>
             </form>
-            <button class="ui button submit_seat_button">제출</button>
+            <button class="ui button" id="submit_seat_button">제출</button>
         </div>
     </div>
+
 </body>
