@@ -14,6 +14,9 @@
     <title>
         <%= title %>
     </title>
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 </head>
 <body>
     <div class="head_cont" style="height: 12.8rem; width: 100%">
@@ -24,12 +27,14 @@
         </div>
     </div>
     <div class="cont">
-        <div style="display: flex; flex-direction: column;">
+        <div style="width: 100%; display: flex; flex-direction: column;">
             <div><h1>이용 가능 좌석</h1></div>
             <div class="ui segment">
-                <img class="seat_image" src="/images/store_<%=storeName%>_.jpg" alt="가게 평면도" style="width: 100%">
+                <img class="seat_image" src="/images/store_<%=storeName%>_.jpg" alt="가게 평면도" style="width: 764px">
                 <% if(storeName === 'gongdae2') { %>
-                    <img class="seat_image" src="/images/store_gongdae3_.jpg" alt="가게 평면도" style="width: 100%">
+                    <div style="font-size: 3.6rem; color: #d2d2d2; position: absolute; top: 30px; right: 30px; font-weight: bold;">2층</div>
+                    <img class="seat_image" src="/images/store_gongdae3_.jpg" alt="가게 평면도" style="width: 764px">
+                    <div style="font-size: 3.6rem; color: #d2d2d2; position: absolute; top: 990px; right: 30px; font-weight: bold;">3층</div>
                 <% } %>
                 <div class="seats_box">
                     <% for(let i = 1; i < seatNum + 1 ; i++) { %>
@@ -40,6 +45,7 @@
                         <% } %>
                     <% } %>
                 </div>
+                <div style="font-size: 1.8rem; color: #828282; width: 764px; text-align: center;">흰색으로 표시된 좌석만 이용이 가능합니다.</div>
             </div>
             <div style="display: flex; justify-content: center; margin: 4rem">
                 <div class="ui selection dropdown">

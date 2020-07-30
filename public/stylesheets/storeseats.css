@@ -6,7 +6,7 @@ html{
     width: 100%;
 }
 body {
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 #head_menu {
     height: 12.8rem;
@@ -16,8 +16,9 @@ body {
     transition: 0.4s;
   }
 .cont{
+    display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: #333333;
 }
 .cont h1 {
@@ -28,8 +29,12 @@ body {
     padding: 50px 0 20px;
 }
 .ui.segment{
-    width: 796px;
-    height: 480px;
+    /* width: 796px; */
+    width: 90vw;
+    height: 50vh;
+    max-width: 796px;
+    max-height: 480px;
+    min-height: 280px;
     margin: 0 auto !important;
     border-radius: 10px !important;
     overflow: scroll;
@@ -43,6 +48,9 @@ body {
     text-align: center !important;
     display: flex !important;
     justify-content: space-between;
+}
+.ui.selection.dropdown .menu {
+    max-height: fit-content !important;
 }
 .dd_item{
     font-weight: normal !important;
@@ -65,3 +73,16 @@ body {
     color: black;
     /* color: #828282; */
 }
+
+  /* 모바일 가로, 세로 (해상도 480px ~ 767px) */
+  @media all and (max-width: 767px) {
+    html {
+      font-size: 7px !important;
+    }
+    body {
+        overflow-x: hidden !important;
+    }
+    .ui.selection.dropdown .menu {
+        max-height: fit-content !important;
+    }
+  }
