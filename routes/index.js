@@ -13,7 +13,18 @@ const dbInfo = require('../database');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('mainpage', { title: '누구나 골목' });
+  let countSeats = 0;
+  
+  dbInfo.query(`SELECT occupied FROM remaining_seats;`, (err, data) => {
+    if (err) throw err;
+    else {
+      countSeats = data[0].occupied + data[1].occupied + data[2].occupied;
+      res.render('mainpage', { 
+        title: '누구나 골목',
+        remainingSeats: countSeats
+      });
+    }
+  });
 });
 
 router.get('/about_ngn', (req, res, next) => {
@@ -63,15 +74,20 @@ router.get('/admin/:storename', (req, res, next) => {
 });
 
 router.post('/seat_submit', (req, res) => {
+  // 가게별 여석 수 테이블
+  let seatCount = req.body.seatcount;
+  delete req.body.seatcount;
+
+  // 가게 좌석 정보 테이블
   let storeName = req.body.storename;
-  // if(storeName === 'gongdae') storeName += '2';
   delete req.body.storename;
   let numOfSeats = Object.keys(req.body).length;
   let qKey = Object.keys(req.body);
   let qValue = "UPDATE `" + storeName + "_store_tbl` SET";
 
-  // console.log('qKey[0] = '+qKey[0]); // inputdata1Id
-  // console.log('qKey[1] = '+qKey[1]);
+  seatCount = numOfSeats - seatCount;
+
+  let numQuery = "UPDATE `remaining_seats` SET occupied=" + seatCount + " WHERE store_name='" + storeName + "';";
 
   let tmp = req.body;
   let tmpVal = tmp[`${qKey[0]}`];
@@ -85,12 +101,13 @@ router.post('/seat_submit', (req, res) => {
   // console.log(qValue);
 
   dbInfo.query(qValue, (err, data) => {
-    if (err) throw err;
-    else {
-      res.json('좌석 업데이트 완료');
-    }
+    if (err) throw err
   });
 
+  dbInfo.query(numQuery, (err, data) => {
+    if (err) throw err;
+    else res.json('좌석 업데이트 완료');
+  });
 });
 
 router.get('/seats/:storename', (req, res) => {

@@ -232,6 +232,15 @@
     margin: 0 auto;
     /* padding: 4rem 0 2rem 0; */
   }
+  #msg {
+    font-size: 1.8rem; 
+    color: #828282; 
+    font-style: italic; 
+    font-weight: normal; 
+    float: right; 
+    position: relative;
+    top: 3rem;
+  }
   #cont3_bottom {
     background: #fdbf35;
     height: 28.2rem;
