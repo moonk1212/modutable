@@ -180,7 +180,7 @@
     text-align: center;
   }
   .heading {
-    font-size: 3.8rem;
+    font-size: 4.8rem;
     font-weight: bold;
     color: #333333;
     line-height: 4.8rem;
@@ -197,11 +197,10 @@
   }
   #store_map {
     width: 100%;
-    height: 100%;
-    background-image: url("../images/store_map2.png");
+    height: 500px;
+    background-image: url("../images/store_map3.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size:contain;
   }
   #cont2_bottom div .title {
     text-align: center;
@@ -225,7 +224,7 @@
   }
   #cont3_top {
     background: white;
-    height: calc(100vh - 282px);
+    height: fit-content;
   }
   #cont3_top .heading {
     width: 95.6rem;
@@ -314,28 +313,35 @@
     height: 30.4rem;
     background: white;
   }
-  #cont5_top {
+  #container5 {
     /* height: 72rem; */
     background-color: rgba(0,0,0, 0.7); 
   }
-  #cont5_top div:nth-child(1) {
+  #container5 .heading {
+    /* color: #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
+    padding-top: 10rem; */
+    width: 100% !important;
+    height: 12.8rem;
+
+    background: white;
+    color: #333333;
+  }
+  #container5>.heading>p {
+    width: 100%;
+    max-width: 956px;
     line-height: 4.8rem;
     font-size: 4.8rem;
     font-weight: bold;
-    color: #f2f2f2;
-    border-bottom: 3px solid #f2f2f2;
-    padding-top: 10rem;
-    padding-bottom: 3.5rem;
-    width: 956px;
     margin: 0 auto;
   }
-  #cont5_top div:nth-child(2) {
+  #container5 div:nth-child(2) {
     font-size: 2.4rem;
     width: 956px;
     margin: 0 auto;
     padding: 5vh 1vw;
   }
-  #cont5_top > div > p {
+  #container5 > div > p {
     line-height: 3.8rem;
   }
   #cont6_bottom {
@@ -363,7 +369,7 @@
     html {
       /* font-size: 9px !important; */
     }
-    .heading {
+    .heading, #container5>.heading>p {
       width: 85vw !important;
     }
     #cont6_bottom div div:nth-child(4),
@@ -383,7 +389,7 @@
   
   /* 모바일 가로, 세로 (해상도 480px ~ 767px) */
   @media all and (max-width: 767px) {
-    #select-store {
+    #select-store, {
       width: 85vw !important;
     }
   }

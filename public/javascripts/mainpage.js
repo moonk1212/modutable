@@ -1,8 +1,10 @@
-// $(document).ready(() => {
+$(document).ready(() => {
 
-//     $('#store1').on('click', () => {
-//         $('.bottom1').slideToggle("slow", () => {
-//             console.log('hi');
-//         });
-//     });
-// });
+    // $('#store1').on('click', () => {
+    //     $('.bottom1').slideToggle("slow", () => {
+    //         console.log('hi');
+    //     });
+    // });
+
+    
+});

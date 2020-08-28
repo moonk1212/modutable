@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
   dbInfo.query(`SELECT occupied FROM remaining_seats;`, (err, data) => {
     if (err) throw err;
     else {
-      countSeats = data[0].occupied + data[1].occupied + data[2].occupied;
+      countSeats = data[0].occupied + data[1].occupied;
       res.render('mainpage', { 
         title: '누구나 골목',
         remainingSeats: countSeats
@@ -37,9 +37,6 @@ router.get('/algo', (req, res, next) => {
 router.get('/gongdae', (req, res, next) => {
   res.render('store2', { title: '누구나 골목: 공대오빠'});
 });
-router.get('/likechicken', (req, res, next) => {
-  res.render('store3', { title: '누구나 골목: 치킨처럼'});
-});
 
 router.get('/admin/:storename', (req, res, next) => {
 
@@ -47,7 +44,7 @@ router.get('/admin/:storename', (req, res, next) => {
   let storeData;
   let seatNum; // 가게별 좌석 갯수
 
-  if (storeName !== 'gongdae' && storeName !== 'algo' && storeName !== 'likechicken') throw err; 
+  if (storeName !== 'gongdae' && storeName !== 'algo') throw err; 
   else {
     if(storeName === 'gongdae') storeName += '2';
 
@@ -83,11 +80,11 @@ router.post('/seat_submit', (req, res) => {
   delete req.body.storename;
   let numOfSeats = Object.keys(req.body).length;
   let qKey = Object.keys(req.body);
-  let qValue = "UPDATE `" + storeName + "_store_tbl` SET";
+  let qValue = "UPDATE `" + storeName + "_store_tbl` SET"; // 가게 좌석 업데이트할 쿼리문
 
   seatCount = numOfSeats - seatCount;
 
-  let numQuery = "UPDATE `remaining_seats` SET occupied=" + seatCount + " WHERE store_name='" + storeName + "';";
+  let numQuery = "UPDATE `remaining_seats` SET occupied=" + seatCount + " WHERE store_name='" + storeName + "';"; // 가게 여석 개수 표시하는 테이블을 업데이트를 위한 쿼리문
 
   let tmp = req.body;
   let tmpVal = tmp[`${qKey[0]}`];
@@ -121,7 +118,7 @@ router.get('/seats/:storename', (req, res) => {
   let storeData;
   let seatNum; // 가게별 좌석 갯수
 
-  if (storeName !== 'gongdae' && storeName !== 'algo' && storeName !== 'likechicken') throw err; 
+  if (storeName !== 'gongdae' && storeName !== 'algo') throw err; 
   else {
     if(storeName === 'gongdae') storeName += '2';
 

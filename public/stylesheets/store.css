@@ -310,8 +310,8 @@ html{
 
     #content{
         margin-top: 10vh;
-        margin-left: 10vw;
-        width: 70vw;
+        margin-left: 5vw;
+        width: 80vw;
     }
 
     .prev, .next {
