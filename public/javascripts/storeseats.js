@@ -25,11 +25,8 @@ $(document).ready(() => {
         case 'gongdae2':
             $('#selected_store').html('공대오빠');
             break;
-        case 'jinmac':
-            $('#selected_store').html('진맥');
-            break;
         case 'likechicken':
-            $('#selected_store').html('치킨처럼 + 끼리끼리');
+            $('#selected_store').html('치킨처럼');
             break;
         default:
             $('#selected_store').html('가게를 선택하세요');

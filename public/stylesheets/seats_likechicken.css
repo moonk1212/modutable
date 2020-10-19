@@ -2,7 +2,7 @@
     position: absolute;
 
     /* background-color: #828282; */
-    border:1px solid #828282;
+    border: 1.5px solid #828282;
     width: 19px; 
     height: 19px;
     border-radius: 100%;
@@ -277,210 +277,186 @@
     left: 329px;
 }
 #seat67{
-    top: 552px;
-    left: 277px;
+    top: 411px;
+    left: 471px;
 }
 #seat68{
-    top: 552px;
-    left: 302px;
+    top: 411px;
+    left: 497px;
 }
 #seat69{
-    top: 552px;
-    left: 329px;
+    top: 472px;
+    left: 471px;
 }
 #seat70{
-    top: 613px;
-    left: 277px;
+    top: 472px;
+    left: 497px;
 }
 #seat71{
-    top: 613px;
-    left: 302px;
+    top: 411px;
+    left: 565px;
 }
 #seat72{
-    top: 613px;
-    left: 329px;
+    top: 411px;
+    left: 591px;
 }
 #seat73{
-    top: 411px;
-    left: 471px;
+    top: 472px;
+    left: 565px;
 }
 #seat74{
-    top: 411px;
-    left: 497px;
+    top: 472px;
+    left: 591px;
 }
 #seat75{
-    top: 472px;
-    left: 471px;
-}
-#seat76{
-    top: 472px;
-    left: 497px;
-}
-#seat77{
-    top: 411px;
-    left: 565px;
-}
-#seat78{
-    top: 411px;
-    left: 591px;
-}
-#seat79{
-    top: 472px;
-    left: 565px;
-}
-#seat80{
-    top: 472px;
-    left: 591px;
-}
-#seat81{
     top: 543px;
     left: 404px;
 }
-#seat82{
+#seat76{
     top: 543px;
     left: 466px;
 }
-#seat83{
+#seat77{
     top: 570px;
     left: 405px;
 }
-#seat84{
+#seat78{
     top: 570px;
     left: 466px;
 }
-#seat85{
+#seat79{
     top: 595px;
     left: 404px;
 }
-#seat86{
+#seat80{
     top: 595px;
     left: 465px;
 }
-#seat87{
+#seat81{
     top: 681.5px;
     left: 404.5px;
+}
+#seat82{
+    top: 681.5px;
+    left: 466px;
+}
+#seat83{
+    top: 708px;
+    left: 404.5px;
+}
+#seat84{
+    top: 708px;
+    left: 466px;
+}
+#seat85{
+    top: 543px;
+    left: 546px;
+}
+#seat86{
+    top: 543px;
+    left: 607px;
+}
+#seat87{
+    top: 570px;
+    left: 546px;
 }
 #seat88{
-    top: 681.5px;
-    left: 466px;
+    top: 570px;
+    left: 607px;
 }
 #seat89{
-    top: 708px;
-    left: 404.5px;
+    top: 595px;
+    left: 546px;
 }
 #seat90{
-    top: 708px;
-    left: 466px;
+    top: 595px;
+    left: 607px;
 }
 #seat91{
-    top: 543px;
-    left: 546px;
+    top: 682px;
+    left: 543px;
 }
 #seat92{
-    top: 543px;
-    left: 607px;
+    top: 682px;
+    left: 604px;
 }
 #seat93{
-    top: 570px;
-    left: 546px;
+    top: 708px;
+    left: 543px;
 }
 #seat94{
-    top: 570px;
-    left: 607px;
+    top: 708px;
+    left: 604px;
 }
 #seat95{
-    top: 595px;
-    left: 546px;
+    top: 412px;
+    left: 669.5px;
 }
 #seat96{
-    top: 595px;
-    left: 607px;
+    top: 412px;
+    left: 731px;
 }
 #seat97{
-    top: 682px;
-    left: 543px;
+    top: 438px;
+    left: 669.5px;
 }
 #seat98{
-    top: 682px;
-    left: 604px;
+    top: 438px;
+    left: 731px;
 }
 #seat99{
-    top: 708px;
-    left: 543px;
+    top: 489px;
+    left: 669.5px;
 }
 #seat100{
-    top: 708px;
-    left: 604px;
+    top: 489px;
+    left: 731px;
 }
 #seat101{
-    top: 412px;
+    top: 515px;
     left: 669.5px;
 }
 #seat102{
-    top: 412px;
+    top: 515px;
     left: 731px;
 }
 #seat103{
-    top: 438px;
-    left: 669.5px;
+    top: 574px;
+    left: 669px;
 }
 #seat104{
-    top: 438px;
-    left: 731px;
+    top: 574px;
+    left: 730px;
 }
 #seat105{
-    top: 489px;
-    left: 669.5px;
+    top: 601px;
+    left: 669px;
 }
 #seat106{
-    top: 489px;
-    left: 731px;
+    top: 601px;
+    left: 730px;
 }
 #seat107{
-    top: 515px;
-    left: 669.5px;
+    top: 626px;
+    left: 669px;
 }
 #seat108{
-    top: 515px;
-    left: 731px;
+    top: 626px;
+    left: 730px;
 }
 #seat109{
-    top: 574px;
+    top: 682px;
     left: 669px;
 }
 #seat110{
-    top: 574px;
+    top: 682px;
     left: 730px;
 }
 #seat111{
-    top: 601px;
-    left: 669px;
-}
-#seat112{
-    top: 601px;
-    left: 730px;
-}
-#seat113{
-    top: 626px;
-    left: 669px;
-}
-#seat114{
-    top: 626px;
-    left: 730px;
-}
-#seat115{
-    top: 682px;
-    left: 669px;
-}
-#seat116{
-    top: 682px;
-    left: 730px;
-}
-#seat117{
     top: 708px;
     left: 669px;
 }
-#seat118{
+#seat112{
     top: 708px;
     left: 730px;
 }

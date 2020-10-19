@@ -1,12 +1,90 @@
-*{
+* {
     font-family: 'Roboto', sans-serif;
 }
-html{
-    font-size: 10px !important;
+body {
+    overflow-x: hidden;
 }
-#seat_box{
-    background-size: 43.8rem 85.8rem;
-    width: 43.8rem;
-    height: 85.8rem;
-    margin-right: 100px;
+html {
+    font-size: 10px !important;
+    width: 100%;
+}
+.cont {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: #dedede;
+}
+.cont h1 {
+    font-size: 24px; 
+    text-align: center; 
+    font-weight: normal;
+    padding: 50px 0 20px;
+}
+.ui.segment {
+    /* width: 796px; */
+    width: 90vw;
+    height: 50vh;
+    max-width: 796px;
+    max-height: 480px;
+    min-height: 280px;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+    overflow: scroll;
+}
+.ui.dropdown {
+    width: 315px;
+    height: 60px;
+    padding: 10px 15px 10px 30px !important;
+    background: #FFFEFE !important;
+    border-radius: 3px !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: space-between;
+}
+.ui.selection.dropdown .menu {
+    max-height: fit-content !important;
+}
+.dd_item {
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 18px !important;
+    height: 50px !important;
+    padding-left: 30px !important;
+}
+#selected_store {
+    font-size: 18px;
+    line-height: 40px;
+    color: black;
+    /* color: #828282; */
+}
+.store_button {
+    width: 120px;
+    height: 60px;
+    background: #333333 !important;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    margin-left: 24px !important;
+}
+#form_box {
+    width: 90vw;
+    max-width: 796px;
+    margin: 0 auto !important;
+    font-size: 1.8rem;
+}
+.seat_checkbox {
+    padding: 3px 2px;
+}
+.ui.checkbox label {
+    padding-left: 1.7em !important;
+    font-size: 1.2em !important;
+}
+#submit_seat_button {
+    height: 40px;
+    width: 90px;
+    background: #333333;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.5rem;
 }

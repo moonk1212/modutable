@@ -1,0 +1,332 @@
+html{
+    width: 100%;
+    overflow-x: hidden !important;
+}
+#container {
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
+}
+
+#container2{
+    margin: 0;
+    padding: 0;
+}
+
+#container_img1 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/알고탭하우스1.png");
+    background-size: cover;
+}
+
+#container_img2 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/알고탭하우스2.png");
+    background-size: cover;
+}
+
+#container_img3 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/공대오빠1.png");
+    background-size: cover;
+}
+
+#container_img4 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/공대오빠2.png");
+    background-size: cover;
+}
+
+#container_img5 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/치킨처럼1.png");
+    background-size: cover;
+}
+
+#container_img6 {
+    width: 32vw;
+    height: 100vh;
+    background-image: url("../images/store/치킨처럼2.png");
+    background-size: cover;
+}
+
+#container_content {
+    padding: 0;
+    background-color: #333333;
+    text-align: center;
+}
+
+#content{
+    margin-top: 23vh;
+    margin-left: 8vw;
+    width: 50vw;
+}
+
+#title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 250%;
+    color: #F2F2F2;
+}
+
+#content_title {
+    padding-left: 1.5rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 200%;
+    color: #FFFFFF;
+}
+
+#content_text{
+    padding-left: 1.5rem;
+    padding-top: 0.7rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 200%;
+    color: #FFFFFF;
+}
+
+#icon{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+#icon_text{
+    margin-top: 12rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+#img1{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5rem;
+    background-color: white;
+    background-image: url("../images/store/와이파이-있음.png");
+    text-align: center;
+    background-size: cover;
+}
+
+#img2{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5rem;
+    background-color: white;
+    background-image: url("../images/store/음식.png");
+    text-align: center;
+    background-size: cover;
+}
+
+#img3{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5rem;
+    background-color: white;
+    background-image: url("../images/store/음료.png");
+    text-align: center;
+    background-size: cover;
+}
+
+#img4{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5rem;
+    background-color: white;
+    background-image: url("../images/store/공용화장실.png");
+    text-align: center;
+    background-size: cover;
+}
+
+#img5{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 0.5rem;
+    background-color: white;
+    background-image: url("../images/store/화장실-분리.png");
+    text-align: center;
+    background-size: cover;
+}
+
+
+#btn {
+    margin-bottom: 2.5rem;
+    background-color: #FDBF35;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+/*Slider CSS*/
+.slideshow-container {
+    width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* 모바일 가로, 세로 (해상도 480px ~ 767px) */
+@media all and (max-width:767px){
+    #container {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    #container2{
+        margin: 0;
+        padding: 0 !important;
+        height: 50%;
+    }
+
+    #container_img1 {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../images/store/알고탭하우스1.png");
+        background-size: cover;
+    }
+    
+    #container_img2 {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../images/store/알고탭하우스2.png");
+        background-size: cover;
+    }
+    
+    #container_img3 {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../images/store/공대오빠1.png");
+        background-size: cover;
+    }
+    
+    #container_img4 {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../images/store/공대오빠2.png");
+        background-size: cover;
+    }
+    
+    #container_img5 {
+        width: 100%;
+        height: 50vh;
+        background-image: url("../images/store/치킨처럼1.png");
+        background-size: cover;
+    }
+    
+    #container_img6 {
+        width: 100vw;
+        height: 50vh;
+        background-image: url("../images/store/치킨처럼2.png");
+        background-size: cover;
+    }
+
+    #content{
+        margin-top: 10vh;
+        margin-left: 5vw;
+        width: 80vw;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 65%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+}
