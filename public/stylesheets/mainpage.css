@@ -74,6 +74,9 @@
     z-index: -1;
   }
   #center_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     margin: 0 auto;
     z-index: 1;
@@ -108,11 +111,10 @@
     height: 23rem;
   }
   #cb3 {
-    width: 12.4rem;
+    width: 30%;
     height: 0px;
     border-top: 3px solid #333333;
     position: absolute;
-    left: 18.5rem;
     top: 36rem;
   }
   #cb4 {
@@ -132,7 +134,7 @@
     font-size: 2.4rem;
   }
   #cont2_top {
-    height: 37.9rem;
+    min-height: 35rem;
     background: white;
   }
   #cont2_top div {
@@ -149,7 +151,8 @@
     width: 45rem;
   }
   #cont2_bottom {
-    height: 70rem;
+    min-height: 70rem;
+    height: fit-content;
     /* padding: 7.3rem 23rem; */
     background: #e0e0e0;
   }
@@ -157,12 +160,17 @@
     max-width: 956px;
     margin: 0 auto;
   }
-  #cont6_bottom {
-    height: 70rem;
+  #container4 {
+    min-height: 70rem;
     /* padding: 7.3rem 23rem; */
     background: #333333;
+    position: relative;
+    z-index: 1;
   }
-  #cont6_bottom div {
+  #container4 .heading {
+    padding: 8rem 0 4rem 0;
+  }
+  #container4 div {
     max-width: 956px;
     margin: 0 auto;
   }
@@ -171,13 +179,14 @@
     font-style: normal;
     font-weight: normal;
     text-align: center;
-    padding-top: 40px;
+    padding: 70px 0;
   }
   .explanation {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: normal;
     text-align: center;
+    padding: 10px;
   }
   .heading {
     font-size: 4.8rem;
@@ -197,7 +206,8 @@
   }
   #store_map {
     width: 100%;
-    height: 500px;
+    height: 50vh;
+    max-height: 500px;
     background-image: url("../images/store_map3.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -208,13 +218,19 @@
     padding-top: 7.3rem;
     padding-bottom: 14.3rem;
   }
-  #cont6_bottom div .title {
+  #container4 div .title {
     text-align: center;
     line-height: 1em;
     padding-top: 7.3rem;
     padding-bottom: 14.3rem;
     position: relative;
     z-index: 1;
+  }
+  .cont4_body {
+    /* width: 920px; */
+    font-size: 2.0rem;
+    line-height: 3.8rem;
+    padding: 40px;
   }
   .content {
     font-size: 2em;
@@ -230,6 +246,13 @@
     width: 95.6rem;
     margin: 0 auto;
     /* padding: 4rem 0 2rem 0; */
+  }
+  #store1, #store2 {
+    margin-left: auto; 
+    font-size: 2rem; 
+    color:black; 
+    text-align: right;
+    text-decoration:none;
   }
   #msg {
     font-size: 1.8rem; 
@@ -314,7 +337,7 @@
     background: white;
   }
   #container5 {
-    /* height: 72rem; */
+    height: 90vh;
     background-color: rgba(0,0,0, 0.7); 
   }
   #container5 .heading {
@@ -323,6 +346,7 @@
     padding-top: 10rem; */
     width: 100% !important;
     height: 12.8rem;
+    margin: 0;
 
     background: white;
     color: #333333;
@@ -330,23 +354,22 @@
   #container5>.heading>p {
     width: 100%;
     max-width: 956px;
-    line-height: 4.8rem;
+    /* line-height: 4.8rem; */
     font-size: 4.8rem;
     font-weight: bold;
     margin: 0 auto;
   }
-  #container5 div:nth-child(2) {
-    font-size: 2.4rem;
-    width: 956px;
-    margin: 0 auto;
-    padding: 5vh 1vw;
-  }
   #container5 > div > p {
     line-height: 3.8rem;
+    font-size: 1.7rem;
   }
-  #cont6_bottom {
-    position: relative;
-    z-index: 1;
+  .cont5_body {
+    height: calc(90vh - 12.8rem);
+    color:#FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   #about_ngn {
     position: absolute;
@@ -357,25 +380,30 @@
     font-weight: normal;
     line-height: 3rem;
   }
-  .nuguna_golmok {
+  .nuguna_illustration {
     background-image: url("../images/mainpage_nuguna.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+    width: 400px;
+    height: 450px;
+  }
+  .who_is_nuguna > p{
+    line-height: 3.8rem; 
+    font-size: 2.2rem;
   }
   
   /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px) */
   @media all and (min-width: 768px) and (max-width: 1023px) {
     html {
       /* font-size: 9px !important; */
+      width: 100%;
     }
     .heading, #container5>.heading>p {
       width: 85vw !important;
     }
-    #cont6_bottom div div:nth-child(4),
-    #cont2_bottom div div:nth-child(3),
-    #cont4_top div:nth-child(1),
-    #cont4_top div:nth-child(2) {
+    #container4 div div:nth-child(4), .cont4_body
+    #cont2_bottom div div:nth-child(3) {
       width: 85vw !important;
     }
     #select-store {
@@ -386,11 +414,76 @@
       width: 85vw !important;
     }
   }
+
+  @media all and (max-width: 891px) {
+    .who_is_nuguna {
+      padding: 0 !important;
+    }
+    .explanation {
+      padding: 10px;
+    }
+    #cont2_bottom > .ui.column > .column {
+      width: 100%;
+    }
+  }
   
   /* 모바일 가로, 세로 (해상도 480px ~ 767px) */
   @media all and (max-width: 767px) {
-    #select-store, {
+    html {
+      font-size: 6px !important;
+    }
+    #nute_logo {
+      width: 180px;
+    }
+    .nuguna_illustration {
+      background-size: contain;
+      width: 90vw;
+    }
+    #container1_background {
+      /* background-size: auto; */
+    }
+    .title {
+      padding: 20px 0;
+    }
+    .heading {
+      padding: 3rem;
       width: 85vw !important;
+      font-size: 4rem;
+    }
+    #center_box {
+      /* width: 300px; */
+      width: 80vw;
+      height: 300px;
+    }
+    .content {
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 10px;
+      line-height: 30px;
+    }
+    #cont2_top {
+      min-height: unset;
+    }
+    #cont2_top div div {
+      padding-bottom: 20px;
+    }
+    #select-store {
+      width: 85vw !important;
+    }
+    #msg {
+      padding-top: 1em;
+    }
+    #cont3_bottom {
+      height: 20rem;
+    }
+    .ssnt_val {
+      font-size: 6rem;
+    }
+    .ssnt_label {
+      font-size: 2rem;
+    }
+    .cont5_body {
+      padding: 0 10px;
     }
   }
   
