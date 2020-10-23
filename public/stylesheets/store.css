@@ -5,7 +5,7 @@ html{
 #container {
     margin: 0;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #container2{
@@ -56,15 +56,21 @@ html{
 }
 
 #container_content {
+    height: 100%;
     padding: 0;
     background-color: #333333;
     text-align: center;
 }
 
 #content{
-    margin-top: 23vh;
-    margin-left: 8vw;
-    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin: 12.8rem 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 8rem 8rem 20rem;
 }
 
 #title{
@@ -114,10 +120,7 @@ html{
 #img1{
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2rem 2vw;
     border-radius: 0.5rem;
     background-color: white;
     background-image: url("../images/store/와이파이-있음.png");
@@ -128,10 +131,7 @@ html{
 #img2{
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2rem 2vw;
     border-radius: 0.5rem;
     background-color: white;
     background-image: url("../images/store/음식.png");
@@ -142,10 +142,7 @@ html{
 #img3{
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2rem 2vw;
     border-radius: 0.5rem;
     background-color: white;
     background-image: url("../images/store/음료.png");
@@ -156,10 +153,7 @@ html{
 #img4{
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2rem 2vw;
     border-radius: 0.5rem;
     background-color: white;
     background-image: url("../images/store/공용화장실.png");
@@ -170,10 +164,7 @@ html{
 #img5{
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin: 2rem 2vw;
     border-radius: 0.5rem;
     background-color: white;
     background-image: url("../images/store/화장실-분리.png");
@@ -183,13 +174,16 @@ html{
 
 
 #btn {
-    margin-bottom: 2.5rem;
+    box-sizing: content-box;
+    width: 24.8rem;
+    height: 6.0rem;
+    margin: 0 auto;
     background-color: #FDBF35;
     border-radius: 3px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 2.4rem;
     text-align: center;
     color: #000000;
 }
@@ -309,9 +303,18 @@ html{
     }
 
     #content{
-        margin-top: 10vh;
+        /* margin-top: 10vh;
         margin-left: 5vw;
-        width: 80vw;
+        width: 80vw; */
+        width: 100%;
+        margin: 4rem 0 10rem 0;
+        padding: 0 5vw 75rem;
+    }
+    #img1, #img2, #img3, #img4 {
+        margin: 3rem 2vw;
+    }
+    #icon_text {
+        line-height: 2.2rem;
     }
 
     .prev, .next {
