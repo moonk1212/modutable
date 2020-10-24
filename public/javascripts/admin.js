@@ -30,7 +30,7 @@ $(document).ready(() => {
         seatData['storename'] = $('#seat_box img').attr('alt');
         seatData['seatcount'] = seatCount;
         console.log(seatData);
-        sendAjax('/seat_submit', seatData);
+        sendAjax('/seat-submit', seatData);
     });
 
     function sendAjax(url, data) {
@@ -38,7 +38,7 @@ $(document).ready(() => {
         // console.log(data);
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', url);
+        xhr.open('PUT', url);
         xhr.setRequestHeader('Content-Type', "application/json");
         xhr.send(data);
 

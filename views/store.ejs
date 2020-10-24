@@ -2,21 +2,23 @@
 <html>
   <head>
     <title><%= title %></title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/nute_favicon.png" type="images/png">
+    <link rel="icon" href="../../images/nute_favicon.png" type="images/png">
 
-    <link rel='stylesheet' href='/stylesheets/mainpage.css' />
-    <link rel='stylesheet' href='/stylesheets/store.css' />
-    <link rel="stylesheet" type="text/css" href="semantic-ui/dist/semantic.min.css">
+    <link rel='stylesheet' href='../stylesheets/mainpage.css' />
+    <link rel='stylesheet' href='../stylesheets/store.css' />
+    <link rel="stylesheet" type="text/css" href="../semantic-ui/dist/semantic.min.css">
 
     <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-    <script src="javascripts/mainpage.js"></script>
-    <script src="javascripts/store.js"></script>
-    <script src="semantic-ui/dist/semantic.min.js"></script>
+
+    <script src="../javascripts/store.js"></script>
+    <script src="../semantic-ui/dist/semantic.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" type='text/css'>      
 
 </head>
@@ -33,11 +35,11 @@
             <div id="container2" class="five wide column">
 <!--                슬라이더-->
                 <div class="slidershow-container">
-                    <div class="mySlides fade">
-                        <div id="container_img1"></div>
+                    <div class="mySlides fade" style="display: block">
+                        <div id="container_img<%=img1%>"></div>
                     </div>
                     <div class="mySlides fade">
-                        <div id="container_img2"></div>
+                        <div id="container_img<%=img2%>"></div>
                     </div>
 <!--                     Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -47,22 +49,22 @@
             <div id="container_content" class="eleven wide column">
               <div id="content">
                 <div class="ui grid" style="padding: 0 1em">
-                <span id="title">알고탭하우스</span>
+                <span id="title"><%= storeName %></span>
                 <div class="row">
                     <span id="content_title">가게 상세 정보</span>
-                    <span id="content_text" style="text-align:left;">알고탭하우스는 넓은 창을 통해 조망과 시원하게 트인 공간을 선사합니다. 가게 내 배치되어있는 가지각색의 술병들과 다양한 포스터는 알고 탭만의 감성을 느끼게 해줍니다. 준비되어 있는 다양한 잡지와 책들을 읽으며 시간을 보낼 수 있으며 가게 내의 술, 음료(별도 지불)를 이용할 수 있습니다. </span>
+                    <span id="content_text" style="text-align:left;"><%= storeInfo %></span>
                 </div>
                 <div class="row">
                     <span id="content_title">주소</span>
-                    <span id="content_text" style="text-align:left;">서울 광진구 광나루로 17길로10 </span>
+                    <span id="content_text" style="text-align:left;"><%= address %></span>
                 </div>
                 <div class="row">
                     <span id="content_title">영업 시간</span>
-                    <span id="content_text" style="text-align:left;">평일 11:00 ~ 15:00, 18:00 ~ 23:59 토요일 13:00 ~ 0:00 매주 일요일 휴무, 매달 마지막 주 월요일 휴무 </span>
+                    <span id="content_text" style="text-align:left;"><%= openTime %></span>
                 </div>
                 <div class="row">
                     <span id="content_title">공간 대여 가능 시간</span>
-                    <span id="content_text" style="text-align:left;">15:00 - 18:00</span>
+                    <span id="content_text" style="text-align:left;"><%= shareTime %></span>
                 </div>
                 </div>
                 <div id="icon">
@@ -82,12 +84,13 @@
                     </div>
                 </div>
                 <div id="btn" class="ui button">
-                    <a href="/seats/algo" style="color: #000000;">여석 확인하기</a>
+                    <a href="/seats/<%=storeId%>" style="color: #000000;">여석 확인하기</a>
                 </div>
               </div>
             </div>
         </div>
     </div>
-    <script src="javascripts/store.js"></script>
+        
+
   </body>
 </html>

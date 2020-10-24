@@ -15,42 +15,14 @@
     position: absolute;
     transition: 0.4s;
   }
-  
-  #menu_button {
-    background-image: url("../images/open-menu2.png");
-    background-size: 3.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
-  }
   .pusher.dimmed {
     overflow: hidden;
     height: 100%;
-  }
-  #main_sidebar {
-    width: 37.9rem;
-    height: 89.6rem;
-    left: 0px;
-    top: 12.8rem;
-  
-    background: #000000;
   }
   .ui.open.button {
     margin-top: 7.9rem;
     margin-left: 2rem;
     background: white;
-  }
-  #mypage {
-    position: absolute;
-    width: 10.2rem; /* 폰트 크기(24px)에 맞추려면 최소 너비 102 이상이어야 됨 */
-    height: 2.4rem;
-    top: 8.2rem;
-    right: 3.4rem;
-  
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.4rem;
-    line-height: 2.4rem; /* 22픽셀로 하면 폰트 크기랑 안 맞음*/
-    color: #000000;
   }
   #container1,
   #container2,

@@ -2,17 +2,8 @@ const express = require('express');
 const router = express.Router();
 const dbInfo = require('../database');
 
-
-// dbInfo.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-//   if (err) throw err
-
-//   console.log('The solution is: ', rows[0].solution)
-// });
-
-// dbInfo.end();
-
 /* GET home page. */
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
   let countSeats = 0;
   
   dbInfo.query(`SELECT occupied FROM remaining_seats;`, (err, data) => {
@@ -27,18 +18,48 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.get('/about_ngn', (req, res, next) => {
-  res.render('about_ngn', { title: '누구나 골목' });
-});
+router.get('/stores/:storenumber', (req, res) => {
+  const stores = [
+    { 
+      storeId: 'algo',
+      title: '누구나 골목: 알고탭하우스', 
+      storeName: '알고탭하우스',
+      storeInfo: '알고탭하우스는 넓은 창을 통해 조망과 시원하게 트인 공간을 선사합니다. 가게 내 배치되어있는 가지각색의 술병들과 다양한 포스터는 알고 탭만의 감성을 느끼게 해줍니다. 준비되어 있는 다양한 잡지와 책들을 읽으며 시간을 보낼 수 있으며 가게 내의 술, 음료(별도 지불)를 이용할 수 있습니다.',
+      address: '서울 광진구 광나루로 17길로10 ',
+      openTime: '평일 11:00 ~ 15:00, 18:00 ~ 23:59 토요일 13:00 ~ 0:00 매주 일요일 휴무, 매달 마지막 주 월요일 휴무 ',
+      shareTime: '15:00 - 18:00',
+      img1: '1',
+      img2: '2'
+    }
+    ,{ 
+      storeId: 'gongdae',
+      title: '누구나 골목: 공대오빠', 
+      storeName: '공대오빠', 
+      storeInfo: '공대오빠의 2층과 3층은 다른 분위기의 공간을 제공합니다. 2층은 동그란 테이블과 의자들이 배치되어 함께 둘러앉아 각종 유쾌한 활동들을 할 수 있습니다. 3층은 조용하고 어두운 분위기이며 빔 프로젝터를 이용하여 다 함께 영화를 보는 등 색다른 활동을 할 수 있습니다. 가게 내의 술이나 음료(별도 지불)도 이용 할 수 있습니다.',
+      address: '서울 광진구 화양동 번지 2호 111-36 3층',
+      openTime: '17:30 ~ 03:00 (매주 일요일 휴무)',
+      shareTime: '13:00 ~ 17:00',
+      img1: '3', 
+      img2: '4'
+    }
+  ]
+  const storeNumber = req.params.storenumber;
 
-router.get('/algo', (req, res, next) => {
-  res.render('store', { title: '누구나 골목: 알고탭하우스'});
-});
-router.get('/gongdae', (req, res, next) => {
-  res.render('store2', { title: '누구나 골목: 공대오빠'});
-});
+  switch (storeNumber) {
+    case '0':
+      res.render('store2', stores[0]);
+      break;
+    case '1':
+      res.render('store2', stores[1]);
+      break;
+    default:
+      res.render('store2', stores[0]);
+  }
+})
 
-router.get('/admin/:storename', (req, res, next) => {
+
+// get 관리자 페이지
+router.get('/admin/:storename', (req, res) => {
 
   let storeName = req.params.storename;
   let storeData;
@@ -70,7 +91,7 @@ router.get('/admin/:storename', (req, res, next) => {
   }
 });
 
-router.post('/seat_submit', (req, res) => {
+router.put('/seat-submit', (req, res) => {
   // 가게별 여석 수 테이블
   let seatCount = req.body.seatcount;
   delete req.body.seatcount;
