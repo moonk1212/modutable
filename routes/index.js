@@ -27,7 +27,7 @@ router.get('/stores/:storenumber', (req, res) => {
       storeInfo: '알고탭하우스는 넓은 창을 통해 조망과 시원하게 트인 공간을 선사합니다. 가게 내 배치되어있는 가지각색의 술병들과 다양한 포스터는 알고 탭만의 감성을 느끼게 해줍니다. 준비되어 있는 다양한 잡지와 책들을 읽으며 시간을 보낼 수 있으며 가게 내의 술, 음료(별도 지불)를 이용할 수 있습니다.',
       address: '서울 광진구 광나루로 17길로10 ',
       openTime: '평일 11:00 ~ 15:00, 18:00 ~ 23:59 토요일 13:00 ~ 0:00 매주 일요일 휴무, 매달 마지막 주 월요일 휴무 ',
-      shareTime: '15:00 - 18:00',
+      shareTime: '15:00 - 18:00 (11월부터는 11:00 - 14:00 로 변경될 예정입니다.)',
       img1: '1',
       img2: '2'
     }
@@ -47,13 +47,13 @@ router.get('/stores/:storenumber', (req, res) => {
 
   switch (storeNumber) {
     case '0':
-      res.render('store2', stores[0]);
+      res.render('store', stores[0]);
       break;
     case '1':
-      res.render('store2', stores[1]);
+      res.render('store', stores[1]);
       break;
     default:
-      res.render('store2', stores[0]);
+      res.render('store', stores[0]);
   }
 })
 
@@ -118,14 +118,26 @@ router.put('/seat-submit', (req, res) => {
   qValue += ';';
   // console.log(qValue);
 
-  dbInfo.query(qValue, (err, data) => {
-    if (err) throw err
-  });
-
-  dbInfo.query(numQuery, (err, data) => {
-    if (err) throw err;
-    else res.json('좌석 업데이트 완료');
-  });
+  try {
+    dbInfo.query(qValue, (err, data) => {
+      if (err) throw err;
+      else res.status(200);
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(400).send('가게 좌석 테이블 업데이트 실패');
+  }
+  
+  try {
+    dbInfo.query(numQuery, (err, data) => {
+      if (err) throw err;
+      else res.json('좌석 업데이트 완료');
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(400).send('가게 여석 개수 테이블 업데이트 실패');
+  }
+  
 });
 
 router.get('/seats/:storename', (req, res) => {

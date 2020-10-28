@@ -17,5 +17,8 @@
     "mysql": "^2.18.1",
     "nvm": "0.0.4",
     "semantic-ui": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
