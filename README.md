@@ -35,3 +35,19 @@
 - 이혜리: 웹 디자인
 - 복지호: 웹 풀스택 개발 
 - 장문경: 웹 메인페이지 부분 퍼블리싱
+
+**Lee Hae Ri** 
+- 웹 디자인
+
+**Bok Jiho**
+- [**@jJiho31**](https://github.com/Jiho31)   
+- <이메일 적기> 
+- 웹 풀스택 개발 
+
+
+**Jang MoonKyung**
+- [**@moonk1212**](https://github.com/moonk1212)   
+- <zm820808@gmail.com> 
+- 웹 메인페이지 부분 퍼블리싱
+
+
