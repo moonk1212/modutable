@@ -37,8 +37,8 @@
 - 웹 디자인
 
 **Bok Jiho**
-- [**@jJiho31**](https://github.com/Jiho31)   
-- <이메일 적기> 
+- [**@Jiho31**](https://github.com/Jiho31)   
+- <bok.jiho@gmail.com> 
 - 웹 풀스택 개발 
 
 
