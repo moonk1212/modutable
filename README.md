@@ -20,7 +20,7 @@
 - Node.js
 - Express.js
 - MySQL
-- AWS Ec2 
+- AWS EC2 
 - Semantic UI
 
 ## 🖱 웹 페이지 기능 소개
