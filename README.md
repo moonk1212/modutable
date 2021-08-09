@@ -47,4 +47,7 @@
 - <zm820808@gmail.com> 
 - 웹 메인페이지 부분 퍼블리싱
 
-
+**Choi Yujin**
+- [**@euzin24**](https://github.com/euzin24)   
+- <since0624@gmail.com> 
+- 웹 메인페이지 부분 퍼블리싱
